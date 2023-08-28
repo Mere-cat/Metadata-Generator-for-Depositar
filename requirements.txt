@@ -3,5 +3,5 @@ matplotlib
 numpy
 ghp-import
 pandas
- -U transformers
- -U ckip-transformers
+transformers
+ckip-transformers
