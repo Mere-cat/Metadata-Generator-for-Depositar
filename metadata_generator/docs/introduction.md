@@ -1,0 +1,6 @@
+# Introduction
+Depositar is an online repository dedicated to housing research data curated by Academia Sinica, Taiwan. As is the case with any data repository, the role of metadata cannot be understated—it serves as the cornerstone when users embark on the quest to discover datasets that align with their specific requirements.
+
+Nonetheless, the task of accurately and comprehensively filling in metadata remains a formidable challenge for dataset providers. When users upload their datasets, they often find themselves uncertain about which Wikidata keywords would best suit their content. Moreover, grappling with the intricacies of spatial coverage can be a considerably intricate endeavor.
+
+To address these issues, we present this ambitious project: the creation of a sophisticated metadata generator. By harnessing the textual information within the datasets, such as descriptions and source file names, this innovative program takes the helm. Its role? To seamlessly offer users tailored recommendations of relevant Wikidata keywords and comprehensive spatial coverage details. Through this, our project aims to empower users, simplifying the process of enhancing their datasets with accurate and pertinent metadata.
