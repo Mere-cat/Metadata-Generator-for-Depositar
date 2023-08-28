@@ -1,8 +1,7 @@
---upgrade pip
 jupyter-book
 matplotlib
 numpy
 ghp-import
 pandas
--U transformers
--U ckip-transformers
+ -U transformers
+ -U ckip-transformers
