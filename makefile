@@ -1,4 +1,4 @@
-IPYNB_FILES = $(wildcard metadata_generator/docs/*.ipynb)
+IPYNB_FILES = $(shell find metadata_generator/docs -name "*.ipynb")
 MD_FILES = $(IPYNB_FILES:.ipynb=.md)
 
 all: nb2md rename build 
