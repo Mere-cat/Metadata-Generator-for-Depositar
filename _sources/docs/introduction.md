@@ -4,12 +4,12 @@ Depositar is an online repository dedicated to housing research data curated by 
 
 Nonetheless, the task of accurately and comprehensively filling in metadata remains a formidable challenge for dataset providers. When users upload their datasets, they often find themselves uncertain about which Wikidata keywords would best suit their content. Moreover, grappling with the intricacies of spatial coverage can be a considerably intricate endeavor.
 
-To address these issues, we present this ambitious project: the creation of a sophisticated metadata generator. By harnessing the textual information within the datasets, such as descriptions and source file names, this innovative program takes the helm. Its role? To seamlessly offer users tailored recommendations of relevant Wikidata keywords and comprehensive spatial coverage details. Through this, our project aims to empower users, simplifying the process of enhancing their datasets with accurate and pertinent metadata.
+Thus, this project aims to develop a metadata generator. Based on textual dataset information such as descriptions or source file names, this program will automatically recommend to users certain Wikidata keywords and spatial coverage information that will assist them in completing the metadata for their dataset.
 
-### TL;DR
+```{admonition} TL;DR
 * **input:** dataset title, dataset description, filenames of sources, file description of sources, project name, project description
 * **output:** wikidata keywords and spatial information for the uploaded dataset
-
+```
 ## More Information
 ### Depositar
 depositar — taking the term from the Portuguese/Spanish verb for to deposit — is an online repository for research data. The site data.depositar.io is built by the researchers for the researchers. You are free to deposit, discover, and reuse datasets on depositar for all your research purposes.
