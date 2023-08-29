@@ -19,9 +19,10 @@ html:
 #######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface        : classic
+  notebook_interface        : "jupyterlab"
   binderhub_url             : "https://mybinder.org"
   colab_url                 : "https://colab.research.google.com"
+  thebe                     : true
 
 repository:
   url                       : https://github.com/Mere-cat/Metadata-Generator-for-Depositar
