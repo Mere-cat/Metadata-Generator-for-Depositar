@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Wikidata Keyword Recommendaion
+# Recommend a Key
 In order to auto recommend wikidata keywords to users, here're two things we need to achieve. 
 
 First, we'll tokenization the input string and find out which ones can be the keyword for the sentence. We'll introduce a NLP tool develop by the ckiplab of Academic Sinica called ckip-tagger. Within its help, we can do NER to the input stence and hence obtain keywords which are potentially be wikidata keywords.
