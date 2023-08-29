@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Recommend a Key" href="wiki_rcmd_new.html" />
+    <link rel="next" title="Recommend Keywords" href="wiki_rcmd_new.html" />
     <link rel="prev" title="Introduction" href="../introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -160,8 +160,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Wikidata Keyword</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Intro to Keyword Generator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_new.html">Recommend a Key</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wiki_demo_new.html">Live Demo: Wikidata Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_new.html">Recommend Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki_demo_new.html">Live Demo</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Information</span></p>
 <ul class="nav bd-sidenav">
@@ -409,9 +409,15 @@ document.write(`
 </figure>
 <section id="stpe-1-ner">
 <h3>Stpe 1: NER<a class="headerlink" href="#stpe-1-ner" title="Permalink to this heading">#</a></h3>
+<p>After obtaining the input metadata for the current dataset, we will utilize Named Entity Recognition (NER) on the input data to selectively extract words that could potentially correspond to Wikidata Q-items.</p>
+<p>We use the <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> NLP task model to achieve this goal.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> is a NLP model under the project <a class="reference external" href="https://github.com/ckiplab/ckip-transformers"><strong>CKIP Transformers</strong></a>, which provides transformer models specifically designed for traditional Chinese.</p>
+<p>We chose <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> due to its high F1 score in NER compared to other models provided by CKIP Lab.</p>
 </section>
 <section id="step-2-wikidata-api-search">
 <h3>Step 2: Wikidata API Search<a class="headerlink" href="#step-2-wikidata-api-search" title="Permalink to this heading">#</a></h3>
+<p>Here, we send a search request through the Wikidata API. By using <code class="docutils literal notranslate"><span class="pre">action=wbsearchentities</span></code>, we can search the Wikidata database using labels and aliases, thus finding the corresponding items that match our input potential keyword.</p>
+<p>For more information, check for <a class="reference external" href="https://www.wikidata.org/w/api.php?action=help&amp;modules=wbsearchentities">Media Wiki help: action=wbsearchentities</a></p>
 </section>
 </section>
 </section>
@@ -461,7 +467,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Recommend a Key</p>
+        <p class="prev-next-title">Recommend Keywords</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

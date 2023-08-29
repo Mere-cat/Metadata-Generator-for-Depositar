@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Recommend a Key
+# Recommend Keywords
 In order to auto recommend wikidata keywords to users, here're two things we need to achieve. 
 
 First, we'll tokenization the input string and find out which ones can be the keyword for the sentence. We'll introduce a NLP tool develop by the ckiplab of Academic Sinica called ckip-tagger. Within its help, we can do NER to the input stence and hence obtain keywords which are potentially be wikidata keywords.
@@ -23,11 +23,17 @@ Finishing the two step works, we'll finally obtain a list of keywords in the inp
 +++
 
 ## Load Data
-Before we starting to try this feature, we'll load the input data from Depositar.
+Before we start trying this feature, we'll load the input data from Depositar.
 
-We previously downloaded metadata of datasets through its API, and store it as file 'datasets.json.' Since we'll only use it as an example input, here's no need to update this file, and the code for calling the API is not include in this notebook.
+Previously, we downloaded metadata of datasets from Depositar through its API, randomly selected 10 datasets, and stored them in a file named `example_depositar_data.json` in the `04_data/` directory. Since we'll only use this as an example input, there's no need to update this file, and the code for calling the API is not included in this notebook.
+
++++
+
+### Obtain metadata from datasets
 
 ```{code-cell} ipython3
+:tags: [hide-input, hide-output]
+
 import json
 import pandas as pd
 # function definition
@@ -66,9 +72,13 @@ We can chose one datasets by its index:(from 0 to 9)
 dataset_idx = 9
 ```
 
+### Output
+
 ```{code-cell} ipython3
+:tags: [hide-input]
+
 if(dataset_idx < 100 and dataset_idx > 1):
-    df = get_metadata('datasets_10.json', dataset_idx)
+    df = get_metadata('../04_data/example_depositar_data.json', dataset_idx)
     input_list = []
     #data_string = df.to_string(index=False, header=False)
     for entity in df:
@@ -80,7 +90,14 @@ else:
 
 ## Step 1: NER task
 
++++
+
+### Import Models
+Here we import the transformer models, and do the NER to our input data.
+
 ```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
 # Import model
 from transformers import (
    BertTokenizerFast,
@@ -98,18 +115,23 @@ pos_driver = CkipPosTagger(model="bert-base")
 ner_driver = CkipNerChunker(model="bert-base")
 ```
 
-```{code-cell} ipython3
-# NER task
-import pandas as pd
-import json
-from ckiptagger import data_utils, construct_dictionary, WS, POS, NER
+### NER task
 
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+# NER task
 ner = ner_driver(input_list)
 ```
 
+### Output
+Below is the output list of the NER result:
+
 ```{code-cell} ipython3
+:tags: [hide-input]
+
 # Show results
-avoid_class = ['QUANTITY', 'CARDINAL', 'DATE']
+avoid_class = ['QUANTITY', 'CARDINAL', 'DATE', 'ORDINAL']
 keyword_map = {}
 for sentence_ner in ner:
    for entity in sentence_ner:
@@ -122,8 +144,15 @@ for key, value in keyword_map.items():
 ```
 
 ## Step 2: Searching through Wikidata API
+After searching each potential word obtained in previous step, now we are going to check if each word is a wikidata keyword.
+
++++
+
+### Request Wikidata API
 
 ```{code-cell} ipython3
+:tags: [hide-input]
+
 import requests
 
 def wiki_search(search_term):
@@ -132,7 +161,7 @@ def wiki_search(search_term):
     response = requests.get(url)
     data = response.json()
 
-    # 處理回傳的數據
+    # organize the response
     if "search" in data:
         for result in data["search"]:
             qid = result["id"]
@@ -143,7 +172,15 @@ def wiki_search(search_term):
         print("No results found.")
 ```
 
+### Output
+
++++
+
+Here is the output of searching result:
+
 ```{code-cell} ipython3
+:tags: [hide-input]
+
 for item in keyword_map:
     print(item)
     wiki_search(item)

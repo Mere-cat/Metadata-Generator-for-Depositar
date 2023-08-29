@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Live Demo: Wikidata Generator &#8212; Auto matadata generator for Depositar</title>
+    <title>Live Demo &#8212; Auto matadata generator for Depositar</title>
   
   
   
@@ -158,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Wikidata Keyword</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_intro.html">Intro to Keyword Generator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_new.html">Recommend a Key</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wiki_demo_new.html">Live Demo: Wikidata Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_new.html">Recommend Keywords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki_demo_new.html">Live Demo</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Information</span></p>
 <ul class="nav bd-sidenav">
@@ -226,7 +226,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Mere-cat/Metadata-Generator-for-Depositar/main?urlpath=tree/docs/docs/01_wikidata/wiki_demo.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/Mere-cat/Metadata-Generator-for-Depositar/main?urlpath=lab/tree/docs/docs/01_wikidata/wiki_demo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -409,7 +409,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -420,11 +422,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Live Demo: Wikidata Generator</h1>
+    <h1>Live Demo</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -434,8 +445,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="live-demo-wikidata-generator">
-<h1>Live Demo: Wikidata Generator<a class="headerlink" href="#live-demo-wikidata-generator" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="live-demo">
+<h1>Live Demo<a class="headerlink" href="#live-demo" title="Permalink to this heading">#</a></h1>
+<p>You can try this feature with your won data in this page.</p>
+<p>Fulfill the cell below and run it to see the result:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: the title of your dataset</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: description of your dataset</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_names</span></code>: file names in your dataset</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_descriptions</span></code>: the description of files in your dataset</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organization_title</span></code>: the tilte of the affiliatedorganization</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organization_description</span></code>: the description of the affiliatedorganization</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Notice
+At least one of the fields should be completed. Leaving all of them empty is not permissible.</p>
+</div>
+<section id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">resource_names</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">resource_descriptions</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">organization_title</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">organization_description</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">gen_keyword</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">resource_names</span><span class="p">,</span> <span class="n">resource_descriptions</span><span class="p">,</span> <span class="n">organization_title</span><span class="p">,</span> <span class="n">organization_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At least one of the fields should be completed. Leaving all of them empty is not permissible.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -478,6 +536,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
