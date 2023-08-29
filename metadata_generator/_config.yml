@@ -1,6 +1,7 @@
 # In _config.yml
 title: Auto matadata generator for Depositar
 author: dQuQb
-logo: logo.png
+logo: images/icons/logo.png
+extra_favicon_path: images/icons/favicon.png
 execute:
   execute_notebooks: force
