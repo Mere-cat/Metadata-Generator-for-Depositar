@@ -19,7 +19,7 @@ html:
 #######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface        : "jupyterlab"
+  notebook_interface        : "classic"
   binderhub_url             : "https://mybinder.org"
   colab_url                 : "https://colab.research.google.com"
   thebe                     : true
