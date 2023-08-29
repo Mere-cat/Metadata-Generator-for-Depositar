@@ -344,7 +344,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -360,6 +362,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stpe-1-ner">Stpe 1: NER</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-wikidata-api-search">Step 2: Wikidata API Search</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -371,16 +386,34 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="intro-to-keyword-generator">
 <h1>Intro to Keyword Generator<a class="headerlink" href="#intro-to-keyword-generator" title="Permalink to this heading">#</a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
 <p>While uploading dataset to Depositar, find wikidata keyword for a dataset can be trivious and tedious.</p>
 <p>In the current Depositar website, users have to fill in wikidata keyword by their own:</p>
 <figure class="align-default" id="depositar-interface">
-<img alt="../../_images/wiki.png" src="../../_images/wiki.png" />
+<a class="reference internal image-reference" href="../../_images/wiki.png"><img alt="../../_images/wiki.png" src="../../_images/wiki.png" style="width: 648.6px; height: 301.2px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">A screenshot of the Depositar interface for inputting Wikidata keywords</span><a class="headerlink" href="#depositar-interface" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Thus, we aims to develop a metadata generator, to help users find the apporporiate wikidata keywords to describe their dataset.</p>
-<p>In this seciton,</p>
+</section>
+<section id="method">
+<h2>Method<a class="headerlink" href="#method" title="Permalink to this heading">#</a></h2>
+<p>In this seciton, we provide a 2-step pipeline to achieve the goal:</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/wiki_pipeline.png" src="../../_images/wiki_pipeline.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">A pipeline for the keyword generator project</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="stpe-1-ner">
+<h3>Stpe 1: NER<a class="headerlink" href="#stpe-1-ner" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="step-2-wikidata-api-search">
+<h3>Step 2: Wikidata API Search<a class="headerlink" href="#step-2-wikidata-api-search" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -441,6 +474,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stpe-1-ner">Stpe 1: NER</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-wikidata-api-search">Step 2: Wikidata API Search</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
