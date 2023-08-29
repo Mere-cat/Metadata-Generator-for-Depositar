@@ -25,7 +25,7 @@ Finishing the two step works, we'll finally obtain a list of keywords in the inp
 ## Load Data
 Before we starting to try this feature, we'll load the input data from Depositar.
 
-We previously downloaded metadata of datasets through its API, and store it as file 'datasets.json.' Since we'll only use it as anexample input, here's no need to update this file, and the code for calling the API is not include in this notebook.
+We previously downloaded metadata of datasets through its API, and store it as file 'datasets.json.' Since we'll only use it as an example input, here's no need to update this file, and the code for calling the API is not include in this notebook.
 
 ```{code-cell} ipython3
 import json

@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Wikidata Keyword</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_intro.html">Intro Keyword Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_intro.html">Intro to Keyword Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wiki_rcmd_new.html">Recommend a Key</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wiki_demo_new.html">Live Demo: Wikidata Generator</a></li>
 </ul>
@@ -213,6 +213,102 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/Mere-cat/Metadata-Generator-for-Depositar/main?urlpath=tree/docs/docs/01_wikidata/wiki_rcmd.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Mere-cat/Metadata-Generator-for-Depositar/blob/main/docs/docs/01_wikidata/wiki_rcmd.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Mere-cat/Metadata-Generator-for-Depositar" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Mere-cat/Metadata-Generator-for-Depositar/issues/new?title=Issue%20on%20page%20%2Fdocs/01_wikidata/wiki_rcmd.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -341,7 +437,7 @@ document.write(`
 <section id="load-data">
 <h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <p>Before we starting to try this feature, we’ll load the input data from Depositar.</p>
-<p>We previously downloaded metadata of datasets through its API, and store it as file ‘datasets.json.’ Since we’ll only use it as anexample input, here’s no need to update this file, and the code for calling the API is not include in this notebook.</p>
+<p>We previously downloaded metadata of datasets through its API, and store it as file ‘datasets.json.’ Since we’ll only use it as an example input, here’s no need to update this file, and the code for calling the API is not include in this notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
