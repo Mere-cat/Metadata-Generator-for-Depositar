@@ -34,8 +34,6 @@ We use the `ckiplab/bert-base-chinese-ner` NLP task model to achieve this goal.
 We chose `ckiplab/bert-base-chinese-ner` due to its high F1 score in NER compared to other models provided by CKIP Lab.
 
 ### Step 2: Wikidata API Search
-After we obtain a list of potential Wikidata keywords, we'll check if they are actually Q-items in Wikidata.
-
-Here we send a search request through wikidata API. By using `action=wbsearchentities`, we can search the wikidata database by labels and aliases, and thus find the correspopnding items that match our input poteintial keyword.
+Here, we send a search request through the Wikidata API. By using `action=wbsearchentities`, we can search the Wikidata database using labels and aliases, thus finding the corresponding items that match our input potential keyword.
 
 For more information, check for [Media Wiki help: action=wbsearchentities](https://www.wikidata.org/w/api.php?action=help&modules=wbsearchentities)
