@@ -101,8 +101,6 @@ Here we import the transformer models, and do the NER to our input data.
 # Import model
 from transformers import (
    BertTokenizerFast,
-   AutoModelForMaskedLM,
-   AutoModelForCausalLM,
    AutoModelForTokenClassification,
 )
 tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
