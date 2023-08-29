@@ -1,7 +1,22 @@
-# In _config.yml
+#######################################################################################
+# Book settings
 title: Auto matadata generator for Depositar
 author: dQuQb
 logo: images/icons/logo.png
-extra_favicon_path: images/icons/favicon.png
+
+#######################################################################################
+# Execution settings
 execute:
-  execute_notebooks: force
+  execute_notebooks         : force
+
+#######################################################################################
+# HTML-specific settings
+html:
+  favicon                   : images/icons/favicon.png
+
+#######################################################################################
+# Information about where the book exists on the web
+repository:
+  url                       : https://github.com/Mere-cat/Metadata-Generator-for-Depositar
+  path_to_book              : Metadata-Generator-for-Depositar/docs/
+  branch                    : main
