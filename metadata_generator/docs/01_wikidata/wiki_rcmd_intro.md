@@ -1,4 +1,4 @@
-# Wikidata Keyword Recommendaion: Intro
+# Intro Keyword Generator
 While uploading dataset to Depositar, find wikidata keyword for a dataset can be trivious and tedious.
 
 In the current Depositar website, users have to fill in wikidata keyword by their own:
