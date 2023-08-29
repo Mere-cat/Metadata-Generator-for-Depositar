@@ -13,10 +13,18 @@ execute:
 # HTML-specific settings
 html:
   favicon                   : images/icons/favicon.png
+  use_repository_button     : true
+  use_issues_button         : true
 
 #######################################################################################
-# Information about where the book exists on the web
+# Launch button settings
+launch_buttons:
+  notebook_interface        : classic
+  binderhub_url             : "https://mybinder.org"
+  colab_url                 : "https://colab.research.google.com"
+
 repository:
   url                       : https://github.com/Mere-cat/Metadata-Generator-for-Depositar
-  path_to_book              : Metadata-Generator-for-Depositar/docs/
+  path_to_book              : docs/
   branch                    : main
+
