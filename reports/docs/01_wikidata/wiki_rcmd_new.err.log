@@ -16,7 +16,8 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 if(dataset_idx < 100 and dataset_idx > 1):
-    df = get_metadata('../../assets/example_depositar_data.json', dataset_idx)
+    data_path = 'https://mere-cat.github.io/Metadata-Generator-for-Depositar/assets/example_depositar_data.json'
+    df = get_metadata(data_path, dataset_idx)
     input_list = []
     for entity in df:
         print(entity, ':', df[entity][0])
@@ -28,11 +29,12 @@ else:
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[3], line 2[0m
+Cell [0;32mIn[3], line 3[0m
 [1;32m      1[0m [38;5;28;01mif[39;00m(dataset_idx [38;5;241m<[39m [38;5;241m100[39m [38;5;129;01mand[39;00m dataset_idx [38;5;241m>[39m [38;5;241m1[39m):
-[0;32m----> 2[0m     df [38;5;241m=[39m [43mget_metadata[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43m../../assets/example_depositar_data.json[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mdataset_idx[49m[43m)[49m
-[1;32m      3[0m     input_list [38;5;241m=[39m []
-[1;32m      4[0m     [38;5;28;01mfor[39;00m entity [38;5;129;01min[39;00m df:
+[1;32m      2[0m     data_path [38;5;241m=[39m [38;5;124m'[39m[38;5;124mhttps://mere-cat.github.io/Metadata-Generator-for-Depositar/assets/example_depositar_data.json[39m[38;5;124m'[39m
+[0;32m----> 3[0m     df [38;5;241m=[39m [43mget_metadata[49m[43m([49m[43mdata_path[49m[43m,[49m[43m [49m[43mdataset_idx[49m[43m)[49m
+[1;32m      4[0m     input_list [38;5;241m=[39m []
+[1;32m      5[0m     [38;5;28;01mfor[39;00m entity [38;5;129;01min[39;00m df:
 
 Cell [0;32mIn[1], line 6[0m, in [0;36mget_metadata[0;34m(data_path, data_index)[0m
 [1;32m      5[0m [38;5;28;01mdef[39;00m [38;5;21mget_metadata[39m(data_path, data_index):

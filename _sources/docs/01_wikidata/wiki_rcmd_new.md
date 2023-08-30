@@ -92,7 +92,8 @@ Below displays the information of our selected dataset:
 :tags: [hide-input]
 
 if(dataset_idx < 100 and dataset_idx > 1):
-    df = get_metadata('../../assets/example_depositar_data.json', dataset_idx)
+    data_path = 'https://mere-cat.github.io/Metadata-Generator-for-Depositar/assets/example_depositar_data.json'
+    df = get_metadata(data_path, dataset_idx)
     input_list = []
     for entity in df:
         print(entity, ':', df[entity][0])
