@@ -21,13 +21,6 @@ You can choose a particular dataset by its index and explore the geographic info
 3. Once the environment is launched, you'll be able to manually execute **each** code cell.
 
 For any hidden code cells, simply click on `Show code cell source` and subsequently click `run` within each respective cell section.
-::::::{tip}
-You can choose a particular dataset by its index and explore the geographic information recommendations provided. To proceed, follow these steps:
-1. Click on the "rocket icon" located in the top-right corner.
-2. Select the option labeled `Live Code` from the menu.
-3. Once the environment is launched, you'll be able to manually execute **each** code cell.
-
-For any hidden code cells, simply click on `Show code cell source` and subsequently click `run` within each respective cell section.
 :::
 
 Here're the information you may input:
@@ -172,6 +165,14 @@ geoInfo_output(result)
 ```
 
 #### Preview the Location in OSM
+
++++
+
+Select one of the location above, copy the geoJSON and paste to the below cell:
+
+```{code-cell} ipython3
+geoInfo = ''
+```
 
 ```{code-cell} ipython3
 :tags: [hide-input]
