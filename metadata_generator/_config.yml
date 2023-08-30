@@ -29,3 +29,8 @@ repository:
   path_to_book              : docs/
   branch                    : main
 
+#######################################################################################
+# Sphinx
+sphinx:
+  config:
+    html_extra_path         : ['assets']
