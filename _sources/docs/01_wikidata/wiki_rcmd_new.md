@@ -90,7 +90,7 @@ Below displays the information of our selected dataset:
 :tags: [hide-input]
 
 if(dataset_idx < 100 and dataset_idx > 1):
-    df = get_metadata('../../data/example_depositar_data.json', dataset_idx)
+    df = get_metadata('../../assets/example_depositar_data.json', dataset_idx)
     input_list = []
     for entity in df:
         print(entity, ':', df[entity][0])

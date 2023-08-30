@@ -540,7 +540,7 @@ First select the “rocket icon” on the right-top, then select <code class="do
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">dataset_idx</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">dataset_idx</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">get_metadata</span><span class="p">(</span><span class="s1">&#39;../../data/example_depositar_data.json&#39;</span><span class="p">,</span> <span class="n">dataset_idx</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">get_metadata</span><span class="p">(</span><span class="s1">&#39;../../assets/example_depositar_data.json&#39;</span><span class="p">,</span> <span class="n">dataset_idx</span><span class="p">)</span>
     <span class="n">input_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">entity</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>

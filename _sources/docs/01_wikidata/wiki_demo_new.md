@@ -16,8 +16,6 @@ kernelspec:
 You can try this feature with your own data in this page. 
 
 :::{tip}
-You can input the information of your own dataset to try this feature.
-
 First select the "rocket icon" on the right-top, then select `Live Code`. After the launching is done, you can run each code cell manually.
 
 For the hidden code cell, click `Show code cell source` then click `Run` in each cell section.
