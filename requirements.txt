@@ -3,6 +3,6 @@ matplotlib
 numpy
 ghp-import
 pandas
-transformers
 ckip-transformers
 jupytext
+ipywidgets
