@@ -80,7 +80,6 @@ dataset_idx = 6
 if(dataset_idx < 100 and dataset_idx > 1):
     df = get_metadata('../04_data/example_depositar_data.json', dataset_idx)
     input_list = []
-    #data_string = df.to_string(index=False, header=False)
     for entity in df:
         print(entity, ':', df[entity][0])
         input_list.append(df[entity][0])
@@ -98,18 +97,8 @@ Here we import the transformer models, and do the NER to our input data.
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
 
-# Import model
-# from transformers import (
-#    BertTokenizerFast,
-#    AutoModelForTokenClassification,
-# )
-# tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
-# model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
-
 # NLP task model
-from ckip_transformers.nlp import CkipNerChunker #, CkipWordSegmenter, CkipPosTagger, 
-# ws_driver  = CkipWordSegmenter(model="bert-base")
-# pos_driver = CkipPosTagger(model="bert-base")
+from ckip_transformers.nlp import CkipNerChunker
 ner_driver = CkipNerChunker(model="bert-base")
 ```
 

@@ -49,14 +49,6 @@ button.on_click(on_button_clicked)
 # Packages Import ============================================================
 import requests
 
-# Import model
-# from transformers import (
-#    BertTokenizerFast,
-#    AutoModelForTokenClassification,
-# )
-# tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
-# model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
-
 # NLP task model
 from ckip_transformers.nlp import CkipNerChunker
 ner_driver = CkipNerChunker(model="bert-base")

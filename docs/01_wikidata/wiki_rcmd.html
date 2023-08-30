@@ -534,7 +534,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">dataset_idx</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">dataset_idx</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">get_metadata</span><span class="p">(</span><span class="s1">&#39;../04_data/example_depositar_data.json&#39;</span><span class="p">,</span> <span class="n">dataset_idx</span><span class="p">)</span>
     <span class="n">input_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#data_string = df.to_string(index=False, header=False)</span>
     <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">entity</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
         <span class="n">input_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">entity</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -569,18 +568,8 @@ Organization Description :
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import model</span>
-<span class="c1"># from transformers import (</span>
-<span class="c1">#    BertTokenizerFast,</span>
-<span class="c1">#    AutoModelForTokenClassification,</span>
-<span class="c1"># )</span>
-<span class="c1"># tokenizer = BertTokenizerFast.from_pretrained(&#39;bert-base-chinese&#39;)</span>
-<span class="c1"># model = AutoModelForTokenClassification.from_pretrained(&#39;ckiplab/bert-tiny-chinese-ner&#39;)</span>
-
-<span class="c1"># NLP task model</span>
-<span class="kn">from</span> <span class="nn">ckip_transformers.nlp</span> <span class="kn">import</span> <span class="n">CkipNerChunker</span> <span class="c1">#, CkipWordSegmenter, CkipPosTagger, </span>
-<span class="c1"># ws_driver  = CkipWordSegmenter(model=&quot;bert-base&quot;)</span>
-<span class="c1"># pos_driver = CkipPosTagger(model=&quot;bert-base&quot;)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NLP task model</span>
+<span class="kn">from</span> <span class="nn">ckip_transformers.nlp</span> <span class="kn">import</span> <span class="n">CkipNerChunker</span>
 <span class="n">ner_driver</span> <span class="o">=</span> <span class="n">CkipNerChunker</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;bert-base&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -705,7 +694,9 @@ QID: Q11107072, Label: Woodside, Description: Residential building in Hong Kong
 QID: Q97025818, Label: Linbian Village, Description: Village in Linbian, Pingtung County, Taiwan
 -------------------------------------------
 屏東縣政府
-QID: Q11042707, Label: Pingtung County Government, Description: executive branch of Pingtung County, Taiwan
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QID: Q11042707, Label: Pingtung County Government, Description: executive branch of Pingtung County, Taiwan
 QID: Q107359613, Label: Department of Public Works, Pingtung County Government, Description: No description available
 QID: Q115624611, Label: 屏東縣政府消防局, Description: No description available
 QID: Q115619758, Label: 屏東縣政府警察局, Description: No description available
