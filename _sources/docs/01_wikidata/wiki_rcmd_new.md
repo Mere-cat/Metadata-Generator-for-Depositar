@@ -98,6 +98,14 @@ Here we import the transformer models, and do the NER to our input data.
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
 
+# Import model
+from transformers import (
+   BertTokenizerFast,
+   AutoModelForTokenClassification,
+)
+tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
+model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
+
 # NLP task model
 from ckip_transformers.nlp import CkipWordSegmenter, CkipPosTagger, CkipNerChunker
 ws_driver  = CkipWordSegmenter(model="bert-base")

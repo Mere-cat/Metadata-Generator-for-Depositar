@@ -28,10 +28,34 @@ At least one of the fields should be completed. Leaving all of them empty is not
 ```
 
 ```{code-cell} ipython3
-:tags: [remove-input, remove-output]
+from IPython.display import display
+import ipywidgets as widgets
+
+button = widgets.Button(description="Click Me!")
+output = widgets.Output()
+
+display(button, output)
+
+def on_button_clicked(b):
+    with output:
+        print("Button clicked.")
+
+button.on_click(on_button_clicked)
+```
+
+```{code-cell} ipython3
+:tags: [remove-output, hide-input]
 
 # Packages Import ============================================================
 import requests
+
+# Import model
+from transformers import (
+   BertTokenizerFast,
+   AutoModelForTokenClassification,
+)
+tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
+model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
 
 # NLP task model
 from ckip_transformers.nlp import CkipWordSegmenter, CkipPosTagger, CkipNerChunker

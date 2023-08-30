@@ -61,6 +61,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"8277f218ea4941fdb87143258a256b22": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "e98ca9a8718d454fa8aa090723bd421f": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "72b13c13167441d7a1daa32bc8a6424d": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "Click Me!", "disabled": false, "icon": "", "layout": "IPY_MODEL_8277f218ea4941fdb87143258a256b22", "style": "IPY_MODEL_e98ca9a8718d454fa8aa090723bd421f", "tabbable": null, "tooltip": null}}, "9ad0da93ced944e588ba36c7d350a40b": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c181ec79f26549688a5c41b42f3ed2e8": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_9ad0da93ced944e588ba36c7d350a40b", "msg_id": "", "outputs": [], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/01_wikidata/wiki_demo_new';</script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -480,6 +483,105 @@ document.write(`
 <p class="admonition-title">Warning</p>
 <p>Notice
 At least one of the fields should be completed. Leaving all of them empty is not permissible.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="n">button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Click Me!&quot;</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">output</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Button clicked.&quot;</span><span class="p">)</span>
+
+<span class="n">button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_clicked</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "72b13c13167441d7a1daa32bc8a6424d"}</script><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "c181ec79f26549688a5c41b42f3ed2e8"}</script></div>
+</div>
+<div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Packages Import ============================================================</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># Import model</span>
+<span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="p">(</span>
+   <span class="n">BertTokenizerFast</span><span class="p">,</span>
+   <span class="n">AutoModelForTokenClassification</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizerFast</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-chinese&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForTokenClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;ckiplab/bert-tiny-chinese-ner&#39;</span><span class="p">)</span>
+
+<span class="c1"># NLP task model</span>
+<span class="kn">from</span> <span class="nn">ckip_transformers.nlp</span> <span class="kn">import</span> <span class="n">CkipWordSegmenter</span><span class="p">,</span> <span class="n">CkipPosTagger</span><span class="p">,</span> <span class="n">CkipNerChunker</span>
+<span class="n">ws_driver</span>  <span class="o">=</span> <span class="n">CkipWordSegmenter</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;bert-base&quot;</span><span class="p">)</span>
+<span class="n">pos_driver</span> <span class="o">=</span> <span class="n">CkipPosTagger</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;bert-base&quot;</span><span class="p">)</span>
+<span class="n">ner_driver</span> <span class="o">=</span> <span class="n">CkipNerChunker</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;bert-base&quot;</span><span class="p">)</span>
+
+<span class="c1"># Function Definstion =========================================================</span>
+<span class="k">def</span> <span class="nf">wiki_search</span><span class="p">(</span><span class="n">search_term</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://www.wikidata.org/w/api.php?action=wbsearchentities&amp;format=json&amp;search=</span><span class="si">{</span><span class="n">search_term</span><span class="si">}</span><span class="s2">&amp;language=zh&quot;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="c1"># organize the response</span>
+    <span class="k">if</span> <span class="s2">&quot;search&quot;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;search&quot;</span><span class="p">]:</span>
+            <span class="n">qid</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;No description available&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;QID: </span><span class="si">{</span><span class="n">qid</span><span class="si">}</span><span class="s2">, Label: </span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">, Description: </span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No results found.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">make_keyword_map</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+    <span class="c1"># NER task</span>
+    <span class="n">ner</span> <span class="o">=</span> <span class="n">ner_driver</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
+
+    <span class="c1"># Build keyword_map to store potential words</span>
+    <span class="n">avoid_class</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;QUANTITY&#39;</span><span class="p">,</span> <span class="s1">&#39;CARDINAL&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE&#39;</span><span class="p">,</span> <span class="s1">&#39;ORDINAL&#39;</span><span class="p">]</span>
+    <span class="n">keyword_map</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">sentence_ner</span> <span class="ow">in</span> <span class="n">ner</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="n">sentence_ner</span><span class="p">:</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">entity</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">avoid_class</span><span class="p">):</span>
+                <span class="k">continue</span>
+        <span class="n">keyword_map</span><span class="p">[</span><span class="n">entity</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">entity</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">keyword_map</span>
+
+<span class="k">def</span> <span class="nf">gen_keyword</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">resource_names</span><span class="p">,</span> <span class="n">resource_descriptions</span><span class="p">,</span> <span class="n">organization_title</span><span class="p">,</span> <span class="n">organization_description</span><span class="p">):</span>
+    <span class="n">input_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">resource_names</span><span class="p">,</span> <span class="n">resource_descriptions</span><span class="p">,</span> <span class="n">organization_title</span><span class="p">,</span> <span class="n">organization_description</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">input_list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+       <span class="n">keyword_map</span> <span class="o">=</span> <span class="n">make_keyword_map</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
+       <span class="k">return</span> <span class="n">keyword_map</span>
+
+<span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;At least one of the fields should be completed. Leaving all of them empty is not permissible.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">keyword_map</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+            <span class="n">wiki_search</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------------------&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <section id="input">
 <h2>Input<a class="headerlink" href="#input" title="Permalink to this heading">#</a></h2>
