@@ -171,7 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Presentation and Exploration</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../03_explor/conclusion.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_explor/conclusion.html">Project Result</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_explor/usage.html">Run with Pure Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_explor/pitfall.html">Exploration and Failed Trials</a></li>
 </ul>
@@ -486,7 +486,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_591bb9340f8ae000dd8dddaaabfb73b8 {
+                #map_f3c4fbbd57c216a4deed3e6b21c56c97 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -521,15 +521,15 @@ document.write(`
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_591bb9340f8ae000dd8dddaaabfb73b8&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_f3c4fbbd57c216a4deed3e6b21c56c97&quot; &gt;&lt;/div&gt;
         
     &lt;a href=&#x27;#&#x27; id=&#x27;export&#x27;&gt;Export&lt;/a&gt;
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_591bb9340f8ae000dd8dddaaabfb73b8 = L.map(
-                &quot;map_591bb9340f8ae000dd8dddaaabfb73b8&quot;,
+            var map_f3c4fbbd57c216a4deed3e6b21c56c97 = L.map(
+                &quot;map_f3c4fbbd57c216a4deed3e6b21c56c97&quot;,
                 {
                     center: [25.041415686746607, 121.61472689731077],
                     crs: L.CRS.EPSG3857,
@@ -543,10 +543,10 @@ document.write(`
 
         
     
-            var tile_layer_016fa2bf04a3e08c17ddeac0d795e45a = L.tileLayer(
+            var tile_layer_db37e3f7ef41dae84df39ccfbebc618c = L.tileLayer(
                 &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_591bb9340f8ae000dd8dddaaabfb73b8);
+            ).addTo(map_f3c4fbbd57c216a4deed3e6b21c56c97);
         
     
             var options = {
@@ -556,13 +556,13 @@ document.write(`
             }
             // FeatureGroup is to store editable layers.
             var drawnItems = new L.featureGroup().addTo(
-                map_591bb9340f8ae000dd8dddaaabfb73b8
+                map_f3c4fbbd57c216a4deed3e6b21c56c97
             );
             options.edit.featureGroup = drawnItems;
-            var draw_control_eb4a0d44e31197a0832efd919041a501 = new L.Control.Draw(
+            var draw_control_5039386d4ed609f17f287dcebe1186ed = new L.Control.Draw(
                 options
-            ).addTo( map_591bb9340f8ae000dd8dddaaabfb73b8 );
-            map_591bb9340f8ae000dd8dddaaabfb73b8.on(L.Draw.Event.CREATED, function(e) {
+            ).addTo( map_f3c4fbbd57c216a4deed3e6b21c56c97 );
+            map_f3c4fbbd57c216a4deed3e6b21c56c97.on(L.Draw.Event.CREATED, function(e) {
                 var layer = e.layer,
                     type = e.layerType;
                 var coords = JSON.stringify(layer.toGeoJSON());
@@ -572,7 +572,7 @@ document.write(`
                 });
                 drawnItems.addLayer(layer);
              });
-            map_591bb9340f8ae000dd8dddaaabfb73b8.on(&#x27;draw:created&#x27;, function(e) {
+            map_f3c4fbbd57c216a4deed3e6b21c56c97.on(&#x27;draw:created&#x27;, function(e) {
                 drawnItems.addLayer(e.layer);
             });
             

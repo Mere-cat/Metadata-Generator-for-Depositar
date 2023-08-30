@@ -171,7 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Presentation and Exploration</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../03_explor/conclusion.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_explor/conclusion.html">Project Result</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_explor/usage.html">Run with Pure Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_explor/pitfall.html">Exploration and Failed Trials</a></li>
 </ul>
@@ -714,7 +714,7 @@ Organization Description :
             <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">place</span><span class="p">[</span><span class="s2">&quot;geojson&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">))</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------------------&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;無法取得地理資訊。&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No geoInfo provided.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -722,7 +722,7 @@ Organization Description :
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OSM result for 林邊 is:
 📍 林边, 礼县, 陇南市, 甘肃省, 中国
 {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [105.247, 34.1612]}
-📍 林邊, 黃埔村, 烈嶼鄉, 金門縣, 89441, 臺灣
+📍 林邊, 黃埔村, 烈嶼鄉, 金門縣, 894, 臺灣
 {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [118.2514395, 24.4465422]}
 📍 林边, 华坪县, 丽江市, 云南省, 中国
 {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [101.2901069, 26.7634965]}
@@ -730,8 +730,20 @@ Organization Description :
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OSM result for 屏東縣政府 is:
-📍 屏東縣政府, 527, 自由路, 勝利里, 屏東市, 屏東縣, 臺灣省, 90001, 臺灣
-{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.4879096, 22.6829927]}
+📍 屏東縣政府消防局 第一大隊長治分隊, 572, 中興路, 德成村, 長治鄉, 屏東縣, 908, 臺灣
+{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[120.5424344, 22.6931001], [120.5425768, 22.6926576], [120.5427666, 22.6927096], [120.5426244, 22.6931521], [120.5424344, 22.6931001]]]}
+📍 三地門分駐所, 101, 中正路二段, 三地門 Timur, 三地村, 三地門鄉, 屏東縣, 901, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.653923, 22.7164095]}
+📍 龍泉派出所, 76, 原勝路, 龍泉村, 內埔鄉, 屏東縣, 91244, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.600196, 22.669117]}
+📍 屏東縣政府文化處, 瑞華街, 瑞光里, 屏東市, 屏東縣, 900, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.5060132, 22.6638532]}
+📍 屏東縣政府消防局特種災害防救訓練基地, 中興路, 德成村, 長治鄉, 屏東縣, 908, 臺灣
+{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[120.541641, 22.6923903], [120.5418882, 22.6915993], [120.5421169, 22.6916561], [120.5423067, 22.6910067], [120.5441017, 22.6903721], [120.5445221, 22.6904809], [120.5444873, 22.6905955], [120.5448628, 22.6906878], [120.5446494, 22.6914052], [120.5442977, 22.6913161], [120.5440393, 22.6921128], [120.5436181, 22.6919996], [120.5433739, 22.6927832], [120.5430217, 22.6926809], [120.5428424, 22.6932162], [120.5426747, 22.693169], [120.5428287, 22.692714], [120.541641, 22.6923903]]]}
+📍 泰武派出所, 佳平巷, 佳平村, 泰武鄉, 屏東縣, 923, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.628896, 22.5916784]}
+📍 三地門消防分隊, 中正路二段, 三地門 Timur, 三地村, 三地門鄉, 屏東縣, 901, 臺灣
+{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[120.6536094, 22.7168276], [120.6537405, 22.7167141], [120.6536988, 22.7166731], [120.6537876, 22.7165963], [120.6539313, 22.7167376], [120.6537114, 22.7169279], [120.6536094, 22.7168276]]]}
 -------------------------------------------
 </pre></div>
 </div>

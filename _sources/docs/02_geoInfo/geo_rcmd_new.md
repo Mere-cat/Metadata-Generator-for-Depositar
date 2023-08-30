@@ -189,7 +189,7 @@ for item in keyword_map:
             print(str(place["geojson"]).replace("'", "\""))
         print('-------------------------------------------')
     else:
-            print("無法取得地理資訊。")
+            print("No geoInfo provided.")
 ```
 
 ### Input geoJSON

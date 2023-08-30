@@ -16,9 +16,12 @@ kernelspec:
 You can try this feature with your own data in this page. 
 
 :::{tip}
-First select the "rocket icon" on the right-top, then select `Live Code`. After the launching is done, you can run each code cell manually.
+You can choose a particular dataset by its index and explore the geographic information recommendations provided. To proceed, follow these steps:
+1. Click on the "rocket icon" located in the top-right corner.
+2. Select the option labeled `Live Code` from the menu.
+3. Once the environment is launched, you'll be able to manually execute **each** code cell.
 
-For the hidden code cell, click `Show code cell source` then click `Run` in each cell section.
+For any hidden code cells, simply click on `Show code cell source` and subsequently click `run` within each respective cell section.
 :::
 
 Here're the information you may input:
@@ -36,7 +39,7 @@ At least one of the fields should be completed. Leaving all of them empty is not
 +++
 
 ## Function Definations
-Just expend it and click `Run`
+Just expend it and click `run`
 
 ```{code-cell} ipython3
 :tags: [remove-output, hide-input]

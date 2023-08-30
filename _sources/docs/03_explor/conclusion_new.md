@@ -11,9 +11,8 @@ kernelspec:
   name: python3
 ---
 
-# Live Demo: Saptial Information Generator
-
-You can try this feature with your own data in this page. 
+# Project Result
+Now, let's integrate the two aspects of our project. This integration will yield an interactive interface that enables users to input their dataset information. Consequently, they will receive the suggested Wikidata keywords along with the most fitting location that accurately characterizes the dataset.
 
 :::{tip}
 You can choose a particular dataset by its index and explore the geographic information recommendations provided. To proceed, follow these steps:
@@ -59,6 +58,22 @@ from ckip_transformers.nlp import CkipNerChunker
 ner_driver = CkipNerChunker(model="bert-base")
 
 # Function Definstion =========================================================
+def wiki_search(search_term):
+    url = f"https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&search={search_term}&language=zh"
+
+    response = requests.get(url)
+    data = response.json()
+
+    # organize the response
+    if "search" in data:
+        for result in data["search"]:
+            qid = result["id"]
+            label = result["label"]
+            description = result.get("description", "No description available")
+            print(f"QID: {qid}, Label: {label}, Description: {description}")
+    else:
+        print("No results found.")
+        
 def search_osm_place(query):
     base_url = "https://nominatim.openstreetmap.org/search"
     params = {
@@ -98,8 +113,18 @@ def gen_keyword(title, description, resource_names, resource_descriptions, organ
     else:
        keyword_map = make_keyword_map(input_list)
        return keyword_map
+    
+def wiki_output(result):
+    if(result == -1):
+        print("At least one of the fields should be completed. Leaving all of them empty is not permissible.")
+        return
+    else:
+        for item in result:
+            print(item)
+            wiki_search(item)
+            print('-------------------------------------------')
 
-def output(result):
+def geoInfo_output(result):
     if(result == -1):
         print("At least one of the fields should be completed. Leaving all of them empty is not permissible.")
         return
@@ -120,8 +145,6 @@ def output(result):
 ✨ You can type information of your own dataset here:
 
 ```{code-cell} ipython3
-:tags: [remove-output]
-
 title = ''
 description = ''
 resource_names = []
@@ -132,21 +155,27 @@ organization_description = ""
 result = gen_keyword(title, description, resource_names, resource_descriptions, organization_title, organization_description)
 ```
 
-### Output
-Below's our recomnned wikidata keyword(s) for your dataset:
+## Result
+
++++
+
+### Wikidata Keyword Recommendation:
 
 ```{code-cell} ipython3
-output(result)
+wiki_output(result)
 ```
 
-### Preview
-Here you can select one of the geographic information, input it below to preview this location:
+### Geographic Information Recommendation:
 
 ```{code-cell} ipython3
-geoInfo = ''
+geoInfo_output(result)
 ```
 
+#### Preview the Location in OSM
+
 ```{code-cell} ipython3
+:tags: [hide-input]
+
 import folium
 
 center_coords = [25.041415686746607, 121.61472689731077]  # Sinica
