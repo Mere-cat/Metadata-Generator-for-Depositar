@@ -14,6 +14,6 @@ parts:
     - file: docs/02_geoInfo/geo_demo_new
   - caption: Presentation and Exploration
     chapters:
-    - file: docs/03_explor/conclusion
+    - file: docs/03_explor/conclusion_new
     - file: docs/03_explor/usage
     - file: docs/03_explor/pitfall
