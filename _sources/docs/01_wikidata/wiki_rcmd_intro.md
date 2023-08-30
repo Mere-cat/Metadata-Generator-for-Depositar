@@ -27,11 +27,11 @@ A pipeline for the keyword generator project
 ### Stpe 1: NER
 After obtaining the input metadata for the current dataset, we will utilize Named Entity Recognition (NER) on the input data to selectively extract words that could potentially correspond to Wikidata Q-items.
 
-We use the `ckiplab/bert-base-chinese-ner` NLP task model to achieve this goal.
+To achieve this goal, we will utilize the `ckiplab/bert-base-chinese-ner` NLP task model.
 
-`ckiplab/bert-base-chinese-ner` is a NLP model under the project [**CKIP Transformers**](https://github.com/ckiplab/ckip-transformers), which provides transformer models specifically designed for traditional Chinese.
+The `ckiplab/bert-base-chinese-ner` model is part of the [**CKIP Transformers**](https://github.com/ckiplab/ckip-transformers) project, which offers transformer models specifically designed for traditional Chinese language processing.
 
-We chose `ckiplab/bert-base-chinese-ner` due to its high F1 score in NER compared to other models provided by CKIP Lab.
+We have selected the `ckiplab/bert-base-chinese-ner` model due to its superior F1 score in NER when compared to other models provided by CKIP Lab.
 
 ### Step 2: Wikidata API Search
 Here, we send a search request through the Wikidata API. By using `action=wbsearchentities`, we can search the Wikidata database using labels and aliases, thus finding the corresponding items that match our input potential keyword.

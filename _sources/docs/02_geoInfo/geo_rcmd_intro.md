@@ -1,1 +1,0 @@
-# Spatial Information Recommendaion: Intro

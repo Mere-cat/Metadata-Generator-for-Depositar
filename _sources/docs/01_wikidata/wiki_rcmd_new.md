@@ -21,10 +21,12 @@ Second, after getting a list of potential words, we'll check if they are wikidat
 Finishing the two step works, we'll finally obtain a list of keywords in the input string, and also are wikidata keywords. That result is what we recommend to the users.
 
 :::{tip}
-You can select a specific dataset by its index and see what wikidata we'll recommend to you.
-First select the "rocket icon" on the right-top, then select `Live Code`. After the launching is done, you can run each code cell manually.
+You can choose a particular dataset by its index and explore the geographic information recommendations provided. To proceed, follow these steps:
+1. Click on the "rocket icon" located in the top-right corner.
+2. Select the option labeled `Live Code` from the menu.
+3. Once the environment is launched, you'll be able to manually execute **each** code cell.
 
-For the hidden code cell, click `Show code cell source` then click `Run` in each cell section.
+For any hidden code cells, simply click on `Show code cell source` and subsequently click `run` within each respective cell section.
 :::
 
 +++
@@ -82,7 +84,7 @@ We can chose one datasets by its index:
 dataset_idx = 6
 ```
 
-✨ You can change the index to see the result of different dataset. (from 0 to 9)
+✨ You can change the index to see the result of different dataset. (from 0 to 99)
 
 +++
 

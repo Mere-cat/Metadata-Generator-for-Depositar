@@ -165,8 +165,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Information</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../02_geoInfo/geo_rcmd_intro.html">Spatial Information Recommendaion: Intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_geoInfo/geo_rcmd_new.html">Spatoal Information Recommend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_geoInfo/geo_rcmd_intro.html">Intro to GeoInfo Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_geoInfo/geo_rcmd_new.html">Intro to GeoInfo Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../02_geoInfo/geo_demo_new.html">Live Demo: Saptial Information Generator</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Presentation and Exploration</span></p>
@@ -410,9 +410,9 @@ document.write(`
 <section id="stpe-1-ner">
 <h3>Stpe 1: NER<a class="headerlink" href="#stpe-1-ner" title="Permalink to this heading">#</a></h3>
 <p>After obtaining the input metadata for the current dataset, we will utilize Named Entity Recognition (NER) on the input data to selectively extract words that could potentially correspond to Wikidata Q-items.</p>
-<p>We use the <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> NLP task model to achieve this goal.</p>
-<p><code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> is a NLP model under the project <a class="reference external" href="https://github.com/ckiplab/ckip-transformers"><strong>CKIP Transformers</strong></a>, which provides transformer models specifically designed for traditional Chinese.</p>
-<p>We chose <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> due to its high F1 score in NER compared to other models provided by CKIP Lab.</p>
+<p>To achieve this goal, we will utilize the <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> NLP task model.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> model is part of the <a class="reference external" href="https://github.com/ckiplab/ckip-transformers"><strong>CKIP Transformers</strong></a> project, which offers transformer models specifically designed for traditional Chinese language processing.</p>
+<p>We have selected the <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code> model due to its superior F1 score in NER when compared to other models provided by CKIP Lab.</p>
 </section>
 <section id="step-2-wikidata-api-search">
 <h3>Step 2: Wikidata API Search<a class="headerlink" href="#step-2-wikidata-api-search" title="Permalink to this heading">#</a></h3>
