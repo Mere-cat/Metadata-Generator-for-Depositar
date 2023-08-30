@@ -31,6 +31,21 @@ At least one of the fields should be completed. Leaving all of them empty is not
 from IPython.display import display
 import ipywidgets as widgets
 
+widgets.IntSlider(
+    value=7,
+    min=0,
+    max=10,
+    step=1,
+    description='Test:',
+    disabled=False,
+    continuous_update=False,
+    orientation='horizontal',
+    readout=True,
+    readout_format='d'
+)
+```
+
+```{code-cell} ipython3
 button = widgets.Button(description="Click Me!")
 output = widgets.Output()
 
