@@ -486,6 +486,7 @@ First select the “rocket icon” on the right-top, then select <code class="do
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
 
 <span class="c1"># function definition</span>
 <span class="k">def</span> <span class="nf">get_metadata</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">data_index</span><span class="p">):</span>
@@ -555,22 +556,12 @@ First select the “rocket icon” on the right-top, then select <code class="do
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">if</span><span class="p">(</span><span class="n">dataset_idx</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">dataset_idx</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">data_path</span> <span class="o">=</span> <span class="s1">&#39;https://mere-cat.github.io/Metadata-Generator-for-Depositar/assets/example_depositar_data.json&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">get_metadata</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">dataset_idx</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">input_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
-
-<span class="nn">Cell In[1], line 6,</span> in <span class="ni">get_metadata</span><span class="nt">(data_path, data_index)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">get_metadata</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">data_index</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;warnings&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title : 林邊排水水質自然淨化工程-林邊排水水質自然淨化處理場域規劃設計
+Notes : 
+Resource Names : [&#39;&#39;]
+Resource Descriptions : [&#39;&#39;]
+Organization Title : 「全國水環境改善計畫」108-109年度屏東縣政府水環境改善輔導顧問團
+Organization Description : 
 </pre></div>
 </div>
 </div>
@@ -704,7 +695,9 @@ First select the “rocket icon” on the right-top, then select <code class="do
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>林邊
-QID: Q708239, Label: Linbian, Description: rural township of Taiwan
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QID: Q708239, Label: Linbian, Description: rural township of Taiwan
 QID: Q7564094, Label: Woodside, Description: neighborhood in Queens, New York City, United States
 QID: Q6550302, Label: Linbian River, Description: river in Taiwan
 QID: Q1033565, Label: Linbian Station, Description: railway station
@@ -713,7 +706,9 @@ QID: Q11107072, Label: Woodside, Description: Residential building in Hong Kong
 QID: Q97025818, Label: Linbian Village, Description: Village in Linbian, Pingtung County, Taiwan
 -------------------------------------------
 屏東縣政府
-QID: Q11042707, Label: Pingtung County Government, Description: executive branch of Pingtung County, Taiwan
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QID: Q11042707, Label: Pingtung County Government, Description: executive branch of Pingtung County, Taiwan
 QID: Q107359613, Label: Department of Public Works, Pingtung County Government, Description: No description available
 QID: Q115624611, Label: 屏東縣政府消防局, Description: No description available
 QID: Q115619758, Label: 屏東縣政府警察局, Description: No description available

@@ -43,6 +43,7 @@ Previously, we downloaded metadata of datasets from Depositar through its API, r
 
 import json
 import pandas as pd
+import warnings
 
 # function definition
 def get_metadata(data_path, data_index):
