@@ -5,4 +5,4 @@ ghp-import
 pandas
 ckip-transformers
 jupytext
-ipywidgets
+folium
