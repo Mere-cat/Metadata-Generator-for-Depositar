@@ -451,8 +451,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-definations">Function Definations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -466,8 +469,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="live-demo">
 <h1>Live Demo<a class="headerlink" href="#live-demo" title="Permalink to this heading">#</a></h1>
-<p>You can try this feature with your won data in this page.</p>
-<p>Fulfill the cell below and run it to see the result:</p>
+<p>You can try this feature with your own data in this page.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can input the information of your own dataset to try this feature.</p>
+<p>First select the “rocket icon” on the right-top, then select <code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">Code</span></code>. After the launching is done, you can run each code cell manually.</p>
+<p>For the hidden code cell, click <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">code</span> <span class="pre">cell</span> <span class="pre">source</span></code> then click <code class="docutils literal notranslate"><span class="pre">Run</span></code> in each cell section.</p>
+</div>
+<p>Here’re the information you may input:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: the title of your dataset</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: description of your dataset</p></li>
@@ -481,27 +490,9 @@ document.write(`
 <p>Notice
 At least one of the fields should be completed. Leaving all of them empty is not permissible.</p>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-
-<span class="n">button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Click Me!&quot;</span><span class="p">)</span>
-<span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
-    <span class="k">with</span> <span class="n">output</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Button clicked.&quot;</span><span class="p">)</span>
-
-<span class="n">button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_clicked</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "fe84e8f598794fc497b35490f4f1e0e3"}</script><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "d769c44c9da24bda8d539821a5a63940"}</script></div>
-</div>
+<section id="function-definations">
+<h2>Function Definations<a class="headerlink" href="#function-definations" title="Permalink to this heading">#</a></h2>
+<p>Just expend it and click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p>
 <div class="cell tag_remove-output tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -551,8 +542,7 @@ At least one of the fields should be completed. Leaving all of them empty is not
 <span class="k">def</span> <span class="nf">gen_keyword</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">resource_names</span><span class="p">,</span> <span class="n">resource_descriptions</span><span class="p">,</span> <span class="n">organization_title</span><span class="p">,</span> <span class="n">organization_description</span><span class="p">):</span>
     <span class="n">input_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">resource_names</span><span class="p">,</span> <span class="n">resource_descriptions</span><span class="p">,</span> <span class="n">organization_title</span><span class="p">,</span> <span class="n">organization_description</span><span class="p">]</span>
 
-    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">item</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">input_list</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-1&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="ow">not</span> <span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">input_list</span><span class="p">):</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
        <span class="n">keyword_map</span> <span class="o">=</span> <span class="n">make_keyword_map</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
@@ -573,7 +563,8 @@ At least one of the fields should be completed. Leaving all of them empty is not
 </details>
 </div>
 <section id="input">
-<h2>Input<a class="headerlink" href="#input" title="Permalink to this heading">#</a></h2>
+<h3>Input<a class="headerlink" href="#input" title="Permalink to this heading">#</a></h3>
+<p>✨ You can type information of your own dataset here:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -590,14 +581,21 @@ At least one of the fields should be completed. Leaving all of them empty is not
 </div>
 </section>
 <section id="output">
-<h2>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h2>
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
+<p>Below’s our recomnned wikidata keyword(s) for your dataset:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At least one of the fields should be completed. Leaving all of them empty is not permissible.
+</pre></div>
 </div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -668,8 +666,11 @@ At least one of the fields should be completed. Leaving all of them empty is not
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-definations">Function Definations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

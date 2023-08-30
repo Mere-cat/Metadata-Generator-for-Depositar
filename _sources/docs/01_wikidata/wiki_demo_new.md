@@ -13,9 +13,17 @@ kernelspec:
 
 # Live Demo
 
-You can try this feature with your won data in this page. 
+You can try this feature with your own data in this page. 
 
-Fulfill the cell below and run it to see the result:
+:::{tip}
+You can input the information of your own dataset to try this feature.
+
+First select the "rocket icon" on the right-top, then select `Live Code`. After the launching is done, you can run each code cell manually.
+
+For the hidden code cell, click `Show code cell source` then click `Run` in each cell section.
+:::
+
+Here're the information you may input:
 * `title`: the title of your dataset
 * `description`: description of your dataset
 * `resource_names`: file names in your dataset
@@ -27,21 +35,10 @@ Fulfill the cell below and run it to see the result:
 At least one of the fields should be completed. Leaving all of them empty is not permissible.
 ```
 
-```{code-cell} ipython3
-from IPython.display import display
-import ipywidgets as widgets
++++
 
-button = widgets.Button(description="Click Me!")
-output = widgets.Output()
-
-display(button, output)
-
-def on_button_clicked(b):
-    with output:
-        print("Button clicked.")
-
-button.on_click(on_button_clicked)
-```
+## Function Definations
+Just expend it and click `Run`
 
 ```{code-cell} ipython3
 :tags: [remove-output, hide-input]
@@ -88,8 +85,7 @@ def make_keyword_map(input_list):
 def gen_keyword(title, description, resource_names, resource_descriptions, organization_title, organization_description):
     input_list = [title, description, resource_names, resource_descriptions, organization_title, organization_description]
 
-    if all(item != "" for item in input_list):
-        print("-1")
+    if all(not item for item in input_list):
         return -1
     else:
        keyword_map = make_keyword_map(input_list)
@@ -107,6 +103,7 @@ def output(result):
 ```
 
 ### Input
+✨ You can type information of your own dataset here:
 
 ```{code-cell} ipython3
 :tags: [remove-output]
@@ -122,6 +119,7 @@ result = gen_keyword(title, description, resource_names, resource_descriptions, 
 ```
 
 ### Output
+Below's our recomnned wikidata keyword(s) for your dataset:
 
 ```{code-cell} ipython3
 output(result)
