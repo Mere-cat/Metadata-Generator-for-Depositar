@@ -28,7 +28,7 @@ result = gen_keyword(title, description, resource_names, resource_descriptions, 
 ----- stderr -----
 Tokenization:   0%|          | 0/6 [00:00<?, ?it/s]
 ----- stderr -----
-Tokenization: 100%|██████████| 6/6 [00:00<00:00, 66400.59it/s]
+Tokenization: 100%|██████████| 6/6 [00:00<00:00, 96420.78it/s]
 ----- stderr -----
 
 ------------------

@@ -20,6 +20,13 @@ Second, after getting a list of potential words, we'll check if they are wikidat
 
 Finishing the two step works, we'll finally obtain a list of keywords in the input string, and also are wikidata keywords. That result is what we recommend to the users.
 
+:::{tip}
+You can select a specific dataset by its index and see what wikidata we'll recommend to you.
+First select the "rocket icon" on the right-top, then select `Live Code`. After the launching is done, you can run each code cell manually.
+
+For the hidden code cell, click `Show code cell source` then click `Run` in each cell section.
+:::
+
 +++
 
 ## Load Data
@@ -66,19 +73,24 @@ def get_metadata(data, data_index):
     return df
 ```
 
-We can chose one datasets by its index:(from 0 to 9)
+We can chose one datasets by its index:
 
 ```{code-cell} ipython3
 dataset_idx = 6
 ```
 
-### Output
+✨ You can change the index to see the result of different dataset. (from 0 to 9)
+
++++
+
+### Show dataset content
+Below displays the information of our selected dataset:
 
 ```{code-cell} ipython3
 :tags: [hide-input]
 
 if(dataset_idx < 100 and dataset_idx > 1):
-    df = get_metadata('../04_data/example_depositar_data.json', dataset_idx)
+    df = get_metadata('../../data/example_depositar_data.json', dataset_idx)
     input_list = []
     for entity in df:
         print(entity, ':', df[entity][0])

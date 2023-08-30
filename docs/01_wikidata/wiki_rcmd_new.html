@@ -453,18 +453,18 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obtain-metadata-from-datasets">Obtain metadata from datasets</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-dataset-content">Show dataset content</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-ner-task">Step 1: NER task</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-models">Import Models</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ner-task">NER task</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-searching-through-wikidata-api">Step 2: Searching through Wikidata API</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-wikidata-api">Request Wikidata API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Output</a></li>
 </ul>
 </li>
 </ul>
@@ -484,6 +484,12 @@ document.write(`
 <p>First, we’ll tokenization the input string and find out which ones can be the keyword for the sentence. We’ll introduce a NLP tool develop by the ckiplab of Academic Sinica called ckip-tagger. Within its help, we can do NER to the input stence and hence obtain keywords which are potentially be wikidata keywords.</p>
 <p>Second, after getting a list of potential words, we’ll check if they are wikidata keyword. Here we send request through the wikidata API, to search if the keyword is recorded in wikidata.</p>
 <p>Finishing the two step works, we’ll finally obtain a list of keywords in the input string, and also are wikidata keywords. That result is what we recommend to the users.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can select a specific dataset by its index and see what wikidata we’ll recommend to you.
+First select the “rocket icon” on the right-top, then select <code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">Code</span></code>. After the launching is done, you can run each code cell manually.</p>
+<p>For the hidden code cell, click <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">code</span> <span class="pre">cell</span> <span class="pre">source</span></code> then click <code class="docutils literal notranslate"><span class="pre">Run</span></code> in each cell section.</p>
+</div>
 <section id="load-data">
 <h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <p>Before we start trying this feature, we’ll load the input data from Depositar.</p>
@@ -532,7 +538,7 @@ document.write(`
 </div>
 </details>
 </div>
-<p>We can chose one datasets by its index:(from 0 to 9)</p>
+<p>We can chose one datasets by its index:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_idx</span> <span class="o">=</span> <span class="mi">6</span>
@@ -540,9 +546,11 @@ document.write(`
 </div>
 </div>
 </div>
+<p>✨ You can change the index to see the result of different dataset. (from 0 to 9)</p>
 </section>
-<section id="output">
-<h3>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
+<section id="show-dataset-content">
+<h3>Show dataset content<a class="headerlink" href="#show-dataset-content" title="Permalink to this heading">#</a></h3>
+<p>Below displays the information of our selected dataset:</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -551,7 +559,7 @@ document.write(`
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">dataset_idx</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">dataset_idx</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">get_metadata</span><span class="p">(</span><span class="s1">&#39;../04_data/example_depositar_data.json&#39;</span><span class="p">,</span> <span class="n">dataset_idx</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">get_metadata</span><span class="p">(</span><span class="s1">&#39;../../data/example_depositar_data.json&#39;</span><span class="p">,</span> <span class="n">dataset_idx</span><span class="p">)</span>
     <span class="n">input_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">entity</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -613,8 +621,8 @@ Organization Description :
 </details>
 </div>
 </section>
-<section id="id1">
-<h3>Output<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
 <p>Below is the output list of the NER result:</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -682,8 +690,8 @@ Organization Description :
 </details>
 </div>
 </section>
-<section id="id2">
-<h3>Output<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="id1">
+<h3>Output<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Here is the output of searching result:</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -797,18 +805,18 @@ QID: Q115619758, Label: 屏東縣政府警察局, Description: No description av
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obtain-metadata-from-datasets">Obtain metadata from datasets</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-dataset-content">Show dataset content</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-ner-task">Step 1: NER task</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-models">Import Models</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ner-task">NER task</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-searching-through-wikidata-api">Step 2: Searching through Wikidata API</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-wikidata-api">Request Wikidata API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Output</a></li>
 </ul>
 </li>
 </ul>
