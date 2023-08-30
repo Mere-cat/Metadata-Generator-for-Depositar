@@ -28,9 +28,3 @@ repository:
   url                       : https://github.com/Mere-cat/Metadata-Generator-for-Depositar
   path_to_book              : docs/
   branch                    : main
-
-#######################################################################################
-# Sphinx
-sphinx:
-  config:
-    html_extra_path         : ['assets']

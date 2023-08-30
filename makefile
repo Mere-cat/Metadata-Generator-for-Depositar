@@ -10,6 +10,7 @@ nb2md: $(MD_FILES)
 
 build:
 	jupyter-book build metadata_generator/
+	cp -r metadata_generator/assets/ metadata_generator/_build/html/
 
 rename:
 	@for file in $(MD_FILES); do \

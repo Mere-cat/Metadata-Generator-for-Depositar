@@ -6,3 +6,6 @@
 ### APIs Response Spatial Information
 
 ### myBinder Launching 
+
+### specify a list of assets that should be copied
+https://github.com/executablebooks/jupyter-book/issues/790
