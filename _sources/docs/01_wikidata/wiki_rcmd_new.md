@@ -43,34 +43,36 @@ Previously, we downloaded metadata of datasets from Depositar through its API, r
 
 import json
 import pandas as pd
-# function definition
-def get_metadata(data, data_index):
-    with open(data, 'r', encoding='utf-8') as file:
-        data = json.load(file)
 
-        title = data[data_index]['title']
-        notes = data[data_index]['notes']
+# function definition
+def get_metadata(data_path, data_index):
+    with warnings.catch_warnings():
+        warnings.simplefilter(action='ignore', category=FutureWarning)
+        data = pd.read_json(data_path)
+
+        title = data.loc[data_index, 'title']
+        notes = data.loc[data_index, 'notes']
 
         resources_names = []
         resources_desps = []
-        for item in data[data_index]['resources']:
+        for item in data.loc[data_index, 'resources']:
             if 'name' in item:
                 resources_names.append(item['name'])
                 resources_desps.append(item['description'])
 
-        organization_title = data[data_index]['organization']['title']
-        organization_desp = data[data_index]['organization']['description']
+        organization_title = data.loc[data_index, 'organization']['title']
+        organization_desp = data.loc[data_index, 'organization']['description']
 
-    df = pd.DataFrame({
-        'Title': [title],
-        'Notes': [notes],
-        'Resource Names': [resources_names],
-        'Resource Descriptions': [resources_desps],
-        'Organization Title': [organization_title],
-        'Organization Description': [organization_desp]
-    })
+        df = pd.DataFrame({
+            'Title': [title],
+            'Notes': [notes],
+            'Resource Names': [resources_names],
+            'Resource Descriptions': [resources_desps],
+            'Organization Title': [organization_title],
+            'Organization Description': [organization_desp]
+        })
 
-    return df
+        return df
 ```
 
 We can chose one datasets by its index:
