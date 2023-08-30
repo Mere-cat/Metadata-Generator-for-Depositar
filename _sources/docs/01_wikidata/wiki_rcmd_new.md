@@ -69,7 +69,7 @@ def get_metadata(data, data_index):
 We can chose one datasets by its index:(from 0 to 9)
 
 ```{code-cell} ipython3
-dataset_idx = 9
+dataset_idx = 6
 ```
 
 ### Output
@@ -99,17 +99,17 @@ Here we import the transformer models, and do the NER to our input data.
 :tags: [hide-input, remove-output]
 
 # Import model
-from transformers import (
-   BertTokenizerFast,
-   AutoModelForTokenClassification,
-)
-tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
-model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
+# from transformers import (
+#    BertTokenizerFast,
+#    AutoModelForTokenClassification,
+# )
+# tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
+# model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
 
 # NLP task model
-from ckip_transformers.nlp import CkipWordSegmenter, CkipPosTagger, CkipNerChunker
-ws_driver  = CkipWordSegmenter(model="bert-base")
-pos_driver = CkipPosTagger(model="bert-base")
+from ckip_transformers.nlp import CkipNerChunker #, CkipWordSegmenter, CkipPosTagger, 
+# ws_driver  = CkipWordSegmenter(model="bert-base")
+# pos_driver = CkipPosTagger(model="bert-base")
 ner_driver = CkipNerChunker(model="bert-base")
 ```
 

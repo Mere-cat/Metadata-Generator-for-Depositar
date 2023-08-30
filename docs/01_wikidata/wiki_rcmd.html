@@ -516,7 +516,7 @@ document.write(`
 <p>We can chose one datasets by its index:(from 0 to 9)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_idx</span> <span class="o">=</span> <span class="mi">9</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_idx</span> <span class="o">=</span> <span class="mi">6</span>
 </pre></div>
 </div>
 </div>
@@ -545,17 +545,12 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title : 第二批次&lt;提案七&gt; 高雄市旗津區中洲漁港水環境改善計畫-中洲漁港老舊碼頭、疏浚及景觀營造
-Notes : 本計畫工程完工後，改善中洲漁港老舊碼頭，維持漁港既有功能外，提供漁民停泊之安全。並清理港區水域淤泥及廢棄物，提供足夠水深。部分設施老舊問題著手進行改善及周邊整體景觀改造，讓整體港區呈現全新的風貌，更提升港區環境品質。
-計畫內容包含:
-(1) 碼頭工程210公尺(B區102公尺+C區108公尺)
-(2) 遮休憩設施(約263m)及欄杆(約67m)
-(3) 意象設施佈告欄3座
-(4) 環境綠美化(約330m)
-Resource Names : [&#39;「全國水環境改善計畫」【高雄市旗津區中洲漁港水環境改善計畫】 整體計畫工作計畫書&#39;, &#39;高雄市旗津區中洲漁港水環境改善計畫簡報&#39;, &#39;資訊公開查核表_中洲漁港老舊碼頭疏浚及景觀營造&#39;, &#39;1080628施工前說明會議紀錄&#39;, &#39;工程介紹及說明_老舊碼頭疏浚及景觀營造&#39;, &#39;生態檢核自評表_中洲漁港老舊碼頭疏浚及景觀營造&#39;, &#39;全民督工專線和專人聯繫窗口&#39;, &#39;生態檢核專章報告&#39;]
-Resource Descriptions : [&#39;中華民國一 O 六年十月&#39;, &#39;提案機關：高雄市政府&#39;, &#39;施工階段&#39;, &#39;1080708-高市海洋工字第10831803800號&#39;, &#39;簡報單位:誠蓄工程顧問(股)有限公司&#39;, &#39;計畫提報/調查設計/施工階段&#39;, &#39;工程告示牌&#39;, &#39;中華民國 109 年 12 月 &#39;]
-Organization Title : 「全國水環境改善計畫」高雄市政府生態檢核暨相關工作計畫
-Organization Description : 經濟部研擬「全國水環境改善計畫」，透過跨部會協調整合，積極推動治水、淨水、親水一體，推動結合生態保育、水質改善及周邊地景之水環境改善，以加速改善全國水環境，期能恢復河川生命力及親水永續水環境。
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title : 林邊排水水質自然淨化工程-林邊排水水質自然淨化處理場域規劃設計
+Notes : 
+Resource Names : [&#39;&#39;]
+Resource Descriptions : [&#39;&#39;]
+Organization Title : 「全國水環境改善計畫」108-109年度屏東縣政府水環境改善輔導顧問團
+Organization Description : 
 </pre></div>
 </div>
 </div>
@@ -575,17 +570,17 @@ Organization Description : 經濟部研擬「全國水環境改善計畫」，�
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import model</span>
-<span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="p">(</span>
-   <span class="n">BertTokenizerFast</span><span class="p">,</span>
-   <span class="n">AutoModelForTokenClassification</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizerFast</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-chinese&#39;</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForTokenClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;ckiplab/bert-tiny-chinese-ner&#39;</span><span class="p">)</span>
+<span class="c1"># from transformers import (</span>
+<span class="c1">#    BertTokenizerFast,</span>
+<span class="c1">#    AutoModelForTokenClassification,</span>
+<span class="c1"># )</span>
+<span class="c1"># tokenizer = BertTokenizerFast.from_pretrained(&#39;bert-base-chinese&#39;)</span>
+<span class="c1"># model = AutoModelForTokenClassification.from_pretrained(&#39;ckiplab/bert-tiny-chinese-ner&#39;)</span>
 
 <span class="c1"># NLP task model</span>
-<span class="kn">from</span> <span class="nn">ckip_transformers.nlp</span> <span class="kn">import</span> <span class="n">CkipWordSegmenter</span><span class="p">,</span> <span class="n">CkipPosTagger</span><span class="p">,</span> <span class="n">CkipNerChunker</span>
-<span class="n">ws_driver</span>  <span class="o">=</span> <span class="n">CkipWordSegmenter</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;bert-base&quot;</span><span class="p">)</span>
-<span class="n">pos_driver</span> <span class="o">=</span> <span class="n">CkipPosTagger</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;bert-base&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">ckip_transformers.nlp</span> <span class="kn">import</span> <span class="n">CkipNerChunker</span> <span class="c1">#, CkipWordSegmenter, CkipPosTagger, </span>
+<span class="c1"># ws_driver  = CkipWordSegmenter(model=&quot;bert-base&quot;)</span>
+<span class="c1"># pos_driver = CkipPosTagger(model=&quot;bert-base&quot;)</span>
 <span class="n">ner_driver</span> <span class="o">=</span> <span class="n">CkipNerChunker</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;bert-base&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -636,11 +631,8 @@ Organization Description : 經濟部研擬「全國水環境改善計畫」，�
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>高雄市 : GPE
-旗津區 : GPE
-中洲 : GPE
-高雄市政府 : ORG
-經濟部 : ORG
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>林邊 : GPE
+屏東縣政府 : ORG
 </pre></div>
 </div>
 </div>
@@ -701,50 +693,22 @@ Organization Description : 經濟部研擬「全國水環境改善計畫」，�
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>高雄市
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>林邊
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QID: Q181557, Label: Kaohsiung, Description: special municipality of Taiwan
-QID: Q15910959, Label: Kaohsiung City, Description: 1945-1979 provincial city in Taiwan
-QID: Q13178092, Label: Kaohsiung City, Description: 1979-2010 special municipality in Taiwan
-QID: Q15915730, Label: Takao City, Description: city of Taiwan under Japanese rule
-QID: Q3846600, Label: Kaohsiung Museum of Fine Arts, Description: art museum in Kaohsiung, Taiwan
-QID: Q713142, Label: Sanmin District, Description: district of Kaohsiung, Taiwan
-QID: Q718014, Label: Zuoying District, Description: district of Kaohsiung City, Taiwan
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QID: Q708239, Label: Linbian, Description: rural township of Taiwan
+QID: Q7564094, Label: Woodside, Description: neighborhood in Queens, New York City, United States
+QID: Q6550302, Label: Linbian River, Description: river in Taiwan
+QID: Q1033565, Label: Linbian Station, Description: railway station
+QID: Q17026596, Label: Linbian Interchange, Description: No description available
+QID: Q11107072, Label: Woodside, Description: Residential building in Hong Kong
+QID: Q97025818, Label: Linbian Village, Description: Village in Linbian, Pingtung County, Taiwan
 -------------------------------------------
-旗津區
-QID: Q706704, Label: Cijin District, Description: district of Kaohsiung City, Taiwan
--------------------------------------------
-中洲
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QID: Q6960335, Label: Nakasu, Description: red-light district in Fukuoka, Japan
-QID: Q16075758, Label: Chen Zisheng, Description: Qing dynasty person CBDB = 81558
-QID: Q49130357, Label: Nakasu, Description: Japanese family name (中洲, なかす)
-QID: Q10875799, Label: Zhongzhou, Description: township in Yueyang, Hunan, China
-QID: Q1039189, Label: Nakasu-Kawabata Station, Description: metro station in Fukuoka, Fukuoka prefecture, Japan
-QID: Q10875809, Label: 中洲镇 (淳安县), Description: No description available
-QID: Q10875808, Label: Zhongzhou, Description: town in Huaiji, Zhaoqing, Guangdong, China
--------------------------------------------
-高雄市政府
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>QID: Q6366077, Label: Kaohsiung City Government, Description: The local government of Kaohsiung
-QID: Q113580970, Label: 高雄市政府, Description: No description available
-QID: Q72325842, Label: Public Works Bureau,Kaohsiung City Government, Description: No description available
-QID: Q60995902, Label: Environmental Protection Bureau, Kaohsiung City Government, Description: government agency of Kaohsiung, Taiwan
-QID: Q15918055, Label: Bureau of Cultural Affairs of Kaohsiung, Description: No description available
-QID: Q11673241, Label: Mass Rapid Transit Bureau, Kaohsiung City Government, Description: No description available
-QID: Q15900495, Label: Kaohsiung City Police, Description: No description available
--------------------------------------------
-經濟部
-QID: Q697113, Label: Ministry of Economic Affairs, Description: registration authority
-QID: Q81886673, Label: Ministry of Economic Affairs and Digital Transformation, Description: No description available
-QID: Q3958441, Label: economic sector, Description: conceptual grouping of economic activities
-QID: Q31046, Label: Water Resources Agency, MOEA, Description: government agency in Taiwan
-QID: Q6865835, Label: Sweden&#39;s Minister for Finance, Description: Swedish cabinet minister
-QID: Q109797916, Label: 經濟部水利署第二河川局, Description: No description available
-QID: Q109798375, Label: 經濟部水利署第七河川局, Description: No description available
+屏東縣政府
+QID: Q11042707, Label: Pingtung County Government, Description: executive branch of Pingtung County, Taiwan
+QID: Q107359613, Label: Department of Public Works, Pingtung County Government, Description: No description available
+QID: Q115624611, Label: 屏東縣政府消防局, Description: No description available
+QID: Q115619758, Label: 屏東縣政府警察局, Description: No description available
 -------------------------------------------
 </pre></div>
 </div>

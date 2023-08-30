@@ -31,21 +31,6 @@ At least one of the fields should be completed. Leaving all of them empty is not
 from IPython.display import display
 import ipywidgets as widgets
 
-widgets.IntSlider(
-    value=7,
-    min=0,
-    max=10,
-    step=1,
-    description='Test:',
-    disabled=False,
-    continuous_update=False,
-    orientation='horizontal',
-    readout=True,
-    readout_format='d'
-)
-```
-
-```{code-cell} ipython3
 button = widgets.Button(description="Click Me!")
 output = widgets.Output()
 
@@ -65,17 +50,15 @@ button.on_click(on_button_clicked)
 import requests
 
 # Import model
-from transformers import (
-   BertTokenizerFast,
-   AutoModelForTokenClassification,
-)
-tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
-model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
+# from transformers import (
+#    BertTokenizerFast,
+#    AutoModelForTokenClassification,
+# )
+# tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
+# model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
 
 # NLP task model
-from ckip_transformers.nlp import CkipWordSegmenter, CkipPosTagger, CkipNerChunker
-ws_driver  = CkipWordSegmenter(model="bert-base")
-pos_driver = CkipPosTagger(model="bert-base")
+from ckip_transformers.nlp import CkipNerChunker
 ner_driver = CkipNerChunker(model="bert-base")
 
 # Function Definstion =========================================================
