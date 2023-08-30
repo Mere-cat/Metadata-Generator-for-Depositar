@@ -58,8 +58,8 @@ import requests
 # model = AutoModelForTokenClassification.from_pretrained('ckiplab/bert-tiny-chinese-ner')
 
 # NLP task model
-from ckip_transformers.nlp import CkipNerChunker
-ner_driver = CkipNerChunker(model="bert-base")
+# from ckip_transformers.nlp import CkipNerChunker
+# ner_driver = CkipNerChunker(model="bert-base")
 
 # Function Definstion =========================================================
 def wiki_search(search_term):
@@ -99,17 +99,18 @@ def gen_keyword(title, description, resource_names, resource_descriptions, organ
     if not all(item for item in input_list):
         return -1
     else:
-       keyword_map = make_keyword_map(input_list)
-       return keyword_map
+       #keyword_map = make_keyword_map(input_list)
+       #return keyword_map
+       return 1
 
 def output(result):
     if(result == -1):
         print("At least one of the fields should be completed. Leaving all of them empty is not permissible.")
-    else:
-        for item in keyword_map:
-            print(item)
-            wiki_search(item)
-            print('-------------------------------------------')
+    # else:
+    #     for item in keyword_map:
+    #         print(item)
+    #         wiki_search(item)
+    #         print('-------------------------------------------')
 ```
 
 ### Input
