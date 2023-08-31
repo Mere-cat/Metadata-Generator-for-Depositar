@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Live Demo: Saptial Information Generator
+# Live Demo
 
 You can try this feature with your own data in this page. 
 
