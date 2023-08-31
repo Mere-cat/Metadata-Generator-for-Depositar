@@ -24,7 +24,7 @@ A fully-rendered HTML version of the book will be built in `metadata_generator/_
 If you'd only like to use the python function to obtain the result metadata, you can simply download the code available in `metadata_generator/code/metadata_generator.py`.
 
 Here are a few basic usage examples:
-#### Creating a Dataset Object and Initializing It
+#### creating a dataset object and initializing it
 ```python
 # fulfill metadata of a dataset 
 title = ''
@@ -38,12 +38,12 @@ organization_description = ""
 your_dataset_obj = dataset(title, description, resource_names, resource_descriptions, organization_title, organization_description)
 ```
 
-#### Generating the Metadata for the Current Dataset Object
+#### generating the metadata for the current dataset object
 ```python
 # generate recommended wikidata key words and geographic information
 your_dataset_obj.gen_meta()
 ```
-#### Access to the Result
+#### access to the result
 The generated Wikidata keywords are stored within `your_dataset_obj.wiki_keyword_list`, while the corresponding geographic information resides in `your_dataset_obj.geoInfo_list`. Both of these structures utilize a list format, with each element representing a recommended metadata entry.
 
 ### 🚀 Hosting the book
