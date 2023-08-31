@@ -23,6 +23,8 @@ A fully-rendered HTML version of the book will be built in `metadata_generator/_
 
 If you'd only like to use the python function to obtain the result metadata, you can simply download the code available in `metadata_generator/code/metadata_generator.py`.
 
+Before start to run the program, make sure you've install all of the requirements by running `pip install -r requirements.txt`
+
 Here are a few basic usage examples:
 #### creating a dataset object and initializing it
 ```python
