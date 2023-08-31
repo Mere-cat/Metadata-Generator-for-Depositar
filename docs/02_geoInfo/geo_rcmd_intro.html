@@ -486,7 +486,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_4cd86345eb9136c6e5204135606b1d92 {
+                #map_38749155528601f4f3951458c12488ad {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -521,15 +521,15 @@ document.write(`
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_4cd86345eb9136c6e5204135606b1d92&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_38749155528601f4f3951458c12488ad&quot; &gt;&lt;/div&gt;
         
     &lt;a href=&#x27;#&#x27; id=&#x27;export&#x27;&gt;Export&lt;/a&gt;
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_4cd86345eb9136c6e5204135606b1d92 = L.map(
-                &quot;map_4cd86345eb9136c6e5204135606b1d92&quot;,
+            var map_38749155528601f4f3951458c12488ad = L.map(
+                &quot;map_38749155528601f4f3951458c12488ad&quot;,
                 {
                     center: [25.041415686746607, 121.61472689731077],
                     crs: L.CRS.EPSG3857,
@@ -543,10 +543,10 @@ document.write(`
 
         
     
-            var tile_layer_0611906b2b14a588f119e02be063b84f = L.tileLayer(
+            var tile_layer_d00367e8ddd0e6d8421250f13a6f1bbe = L.tileLayer(
                 &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_4cd86345eb9136c6e5204135606b1d92);
+            ).addTo(map_38749155528601f4f3951458c12488ad);
         
     
             var options = {
@@ -556,13 +556,13 @@ document.write(`
             }
             // FeatureGroup is to store editable layers.
             var drawnItems = new L.featureGroup().addTo(
-                map_4cd86345eb9136c6e5204135606b1d92
+                map_38749155528601f4f3951458c12488ad
             );
             options.edit.featureGroup = drawnItems;
-            var draw_control_c656a5dda3ed4c4278e7d24e905ad444 = new L.Control.Draw(
+            var draw_control_bf8e7c143744c02dcbe1e1054c0128f5 = new L.Control.Draw(
                 options
-            ).addTo( map_4cd86345eb9136c6e5204135606b1d92 );
-            map_4cd86345eb9136c6e5204135606b1d92.on(L.Draw.Event.CREATED, function(e) {
+            ).addTo( map_38749155528601f4f3951458c12488ad );
+            map_38749155528601f4f3951458c12488ad.on(L.Draw.Event.CREATED, function(e) {
                 var layer = e.layer,
                     type = e.layerType;
                 var coords = JSON.stringify(layer.toGeoJSON());
@@ -572,7 +572,7 @@ document.write(`
                 });
                 drawnItems.addLayer(layer);
              });
-            map_4cd86345eb9136c6e5204135606b1d92.on(&#x27;draw:created&#x27;, function(e) {
+            map_38749155528601f4f3951458c12488ad.on(&#x27;draw:created&#x27;, function(e) {
                 drawnItems.addLayer(e.layer);
             });
             
