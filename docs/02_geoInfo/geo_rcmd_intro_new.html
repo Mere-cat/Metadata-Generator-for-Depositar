@@ -164,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Information</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="geo_rcmd_intro.html">Intro to GeoInfo Generator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geo_rcmd_new.html">Intro to GeoInfo Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo_rcmd_new.html">Recommend GeoInfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geo_demo_new.html">Live Demo</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Presentation and Exploration</span></p>
@@ -497,7 +497,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_743732a7843074323b03dc8027e88672 {
+                #map_3111d57285ea3130658a28e1a200d423 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -532,15 +532,15 @@ document.write(`
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_743732a7843074323b03dc8027e88672&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_3111d57285ea3130658a28e1a200d423&quot; &gt;&lt;/div&gt;
         
     &lt;a href=&#x27;#&#x27; id=&#x27;export&#x27;&gt;Export&lt;/a&gt;
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_743732a7843074323b03dc8027e88672 = L.map(
-                &quot;map_743732a7843074323b03dc8027e88672&quot;,
+            var map_3111d57285ea3130658a28e1a200d423 = L.map(
+                &quot;map_3111d57285ea3130658a28e1a200d423&quot;,
                 {
                     center: [25.041415686746607, 121.61472689731077],
                     crs: L.CRS.EPSG3857,
@@ -554,10 +554,10 @@ document.write(`
 
         
     
-            var tile_layer_4c955a8da6414c88bfe61d4caf710dd4 = L.tileLayer(
+            var tile_layer_e01499feed06050e430de013c6bb1d4d = L.tileLayer(
                 &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_743732a7843074323b03dc8027e88672);
+            ).addTo(map_3111d57285ea3130658a28e1a200d423);
         
     
             var options = {
@@ -567,13 +567,13 @@ document.write(`
             }
             // FeatureGroup is to store editable layers.
             var drawnItems = new L.featureGroup().addTo(
-                map_743732a7843074323b03dc8027e88672
+                map_3111d57285ea3130658a28e1a200d423
             );
             options.edit.featureGroup = drawnItems;
-            var draw_control_9fc92f0b196254947eec31df7344b3a4 = new L.Control.Draw(
+            var draw_control_1781116ddc9fe7aea2dbb1b655cd3edd = new L.Control.Draw(
                 options
-            ).addTo( map_743732a7843074323b03dc8027e88672 );
-            map_743732a7843074323b03dc8027e88672.on(L.Draw.Event.CREATED, function(e) {
+            ).addTo( map_3111d57285ea3130658a28e1a200d423 );
+            map_3111d57285ea3130658a28e1a200d423.on(L.Draw.Event.CREATED, function(e) {
                 var layer = e.layer,
                     type = e.layerType;
                 var coords = JSON.stringify(layer.toGeoJSON());
@@ -583,7 +583,7 @@ document.write(`
                 });
                 drawnItems.addLayer(layer);
              });
-            map_743732a7843074323b03dc8027e88672.on(&#x27;draw:created&#x27;, function(e) {
+            map_3111d57285ea3130658a28e1a200d423.on(&#x27;draw:created&#x27;, function(e) {
                 drawnItems.addLayer(e.layer);
             });
             

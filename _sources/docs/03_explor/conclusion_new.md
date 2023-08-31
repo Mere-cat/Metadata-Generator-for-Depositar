@@ -15,7 +15,7 @@ kernelspec:
 Now, let's integrate the two aspects of our project. This integration will yield an interactive interface that enables users to input their dataset information. Consequently, they will receive the suggested Wikidata keywords along with the most fitting location that accurately characterizes the dataset.
 
 :::{tip}
-You can choose a particular dataset by its index and explore the geographic information recommendations provided. To proceed, follow these steps:
+To obtain wikidata keyword and the geographic information for your dataset, follow these steps:
 1. Click on the "rocket icon" located in the top-right corner.
 2. Select the option labeled `Live Code` from the menu.
 3. Once the environment is launched, you'll be able to manually execute **each** code cell.

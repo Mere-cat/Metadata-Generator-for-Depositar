@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Intro to GeoInfo Generator
+# Recommend GeoInfo
 
 +++
 

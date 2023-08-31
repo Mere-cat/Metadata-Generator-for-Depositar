@@ -34,7 +34,7 @@ For any hidden code cells, simply click on `Show code cell source` and subsequen
 ## Load Data
 Before we start trying this feature, we'll load the input data from Depositar.
 
-Previously, we downloaded metadata of datasets from Depositar through its API, randomly selected 10 datasets, and stored them in a file named `example_depositar_data.json` in the `04_data/` directory. Since we'll only use this as an example input, there's no need to update this file, and the code for calling the API is not included in this notebook.
+Previously, we downloaded metadata of datasets from Depositar through its API, randomly selected 10 datasets, and stored them in a file named `example_depositar_data.json` in the `assets/` directory. Since we'll only use this as an example input, there's no need to update this file, and the code for calling the API is not included in this notebook.
 
 +++
 

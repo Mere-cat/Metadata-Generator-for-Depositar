@@ -16,7 +16,7 @@ kernelspec:
 You can try this feature with your own data in this page. 
 
 :::{tip}
-You can choose a particular dataset by its index and explore the geographic information recommendations provided. To proceed, follow these steps:
+To obtain wikidata keyword for your dataset, follow these steps:
 1. Click on the "rocket icon" located in the top-right corner.
 2. Select the option labeled `Live Code` from the menu.
 3. Once the environment is launched, you'll be able to manually execute **each** code cell.

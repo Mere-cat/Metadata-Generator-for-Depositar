@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Intro to GeoInfo Generator &#8212; Auto matadata generator for Depositar</title>
+    <title>Recommend GeoInfo &#8212; Auto matadata generator for Depositar</title>
   
   
   
@@ -164,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Information</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="geo_rcmd_intro.html">Intro to GeoInfo Generator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="geo_rcmd_new.html">Intro to GeoInfo Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo_rcmd_new.html">Recommend GeoInfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geo_demo_new.html">Live Demo</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Presentation and Exploration</span></p>
@@ -422,7 +422,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Intro to GeoInfo Generator</h1>
+    <h1>Recommend GeoInfo</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,8 +461,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="intro-to-geoinfo-generator">
-<h1>Intro to GeoInfo Generator<a class="headerlink" href="#intro-to-geoinfo-generator" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="recommend-geoinfo">
+<h1>Recommend GeoInfo<a class="headerlink" href="#recommend-geoinfo" title="Permalink to this heading">#</a></h1>
 <p>To automatically recommend locations along with their geographic information to users, we need to accomplish two key objectives.</p>
 <p>To begin with, we will tokenize the input string to identify potential keywords for the given input. To achieve this, we will utilize a Natural Language Processing (NLP) tool developed by the ckiplab at Academic Sinica, called <code class="docutils literal notranslate"><span class="pre">ckiplab/bert-base-chinese-ner</span></code>. With the assistance of this tool, we can perform Named Entity Recognition (NER) on the input sentence, thereby extracting keywords that could potentially match Wikidata keywords.</p>
 <p>Subsequently, once we have compiled a list of potential words, our next step involves verifying whether these words correspond to actual locations across the globe. For this purpose, we will make use of the Nominatim API to retrieve search results for the list of potential keywords.</p>
