@@ -3,7 +3,7 @@ During the evolution of this project, we encountered various challenges and soug
 
 Furthermore, in the concluding segment, we will delve into our future plans and avenues for enhancing our existing work.
 
-## Solved Probelms
+## 📌 Solved Probelms
 ### Model file of Ckiptagger need too much spaces
 * **Problem description:** Initially, we opted for the [ckiptagger](https://github.com/ckiplab/ckiptagger) to execute the NLP task. However, this choice necessitated downloading the model files to our local environment prior to usage. Regrettably, the file size is too large to push to GitHub.
 
@@ -13,13 +13,14 @@ Furthermore, in the concluding segment, we will delve into our future plans and 
 * **Problem description:** Initially, our intention was to retrieve geographical data using the  [Overpass API](http://overpass-api.de/). However, the coordinates returned from this source did not conform to the counter clockwise order.
 
     For instance, provided below is a visual representation of the coordinates obtained from the Overpass API when querying for "南港區" (Nangang District):
-    ```{figure} ../../images/nangang.png
-    ---
-    name: nangang
-    scale: 60%
-    ---
-    Boundary of Nangang District as provided by the Overpass API
-    ```
+
+```{figure} ../../images/nangang.png
+---
+name: nangang
+scale: 60%
+---
+Boundary of Nangang District as provided by the Overpass API
+```
 
 * **Solution:** Move to [Nominatim API](https://nominatim.org/release-docs/latest/api/Overview/).
 
@@ -40,7 +41,7 @@ Furthermore, in the concluding segment, we will delve into our future plans and 
 
 * **Solution:** Use absolute path(url). However, we've not found a solution that allows a relative file path.
 
-## Unsolved Probelms
+## 📌 Unsolved Probelms
 ### Ipywidget
 * **Problem description:** We found that the [Ipywidget](https://ipywidgets.readthedocs.io/en/latest/user_install.html) widget did not respond as expected to our actions. Despite our attempt to implement the [button example](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Events.html) provided in the documentation, no visible outcome ensued upon clicking the button. In theory, it should display "Button clicked." on the screen.
 
@@ -49,7 +50,7 @@ Furthermore, in the concluding segment, we will delve into our future plans and 
 ### Excessive Book Launching Time
 * **Problem description:** Using the `Live Code` feature to run the book within myBinder might result in a prolonged execution time.
 
-## Futher Expectation 
+## 📌 Futher Expectation 
 ### Support English Dataset
 As of now, the NER model we are utilizing exclusively supports traditional Chinese, rendering English and other languages incompatible. However, our aspirations involve broadening our language processing capabilities to encompass a wider array of languages in the future.
 

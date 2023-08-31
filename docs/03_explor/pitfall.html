@@ -366,7 +366,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solved-probelms">Solved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solved-probelms">📌 Solved Probelms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-file-of-ckiptagger-need-too-much-spaces">Model file of Ckiptagger need too much spaces</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-api-not-returning-coordinates-in-counter-clockwise-order">Overpass API Not Returning Coordinates in Counter Clockwise Order</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cannot-load-data-from-the-current-repository">Cannot Load Data from the Current Repository</a><ul class="nav section-nav flex-column">
@@ -376,12 +376,12 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsolved-probelms">Unsolved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsolved-probelms">📌 Unsolved Probelms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipywidget">Ipywidget</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excessive-book-launching-time">Excessive Book Launching Time</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futher-expectation">Futher Expectation</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futher-expectation">📌 Futher Expectation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-english-dataset">Support English Dataset</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-search-result-by-relevance">Sort Search Result by Relevance</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-search-result-from-apis-is-irrelevant-to-our-dataset">Check if Search Result from APIs is Irrelevant to our Dataset</a></li>
@@ -404,7 +404,7 @@ document.write(`
 <p>During the evolution of this project, we encountered various challenges and sought to implement our project vision in a strategic manner. Here, we outline the issues we encountered, along with the solutions we devised. While certain problems persist without resolution, it’s important to acknowledge our progress thus far.</p>
 <p>Furthermore, in the concluding segment, we will delve into our future plans and avenues for enhancing our existing work.</p>
 <section id="solved-probelms">
-<h2>Solved Probelms<a class="headerlink" href="#solved-probelms" title="Permalink to this heading">#</a></h2>
+<h2>📌 Solved Probelms<a class="headerlink" href="#solved-probelms" title="Permalink to this heading">#</a></h2>
 <section id="model-file-of-ckiptagger-need-too-much-spaces">
 <h3>Model file of Ckiptagger need too much spaces<a class="headerlink" href="#model-file-of-ckiptagger-need-too-much-spaces" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
@@ -417,13 +417,15 @@ document.write(`
 <ul>
 <li><p><strong>Problem description:</strong> Initially, our intention was to retrieve geographical data using the  <a class="reference external" href="http://overpass-api.de/">Overpass API</a>. However, the coordinates returned from this source did not conform to the counter clockwise order.</p>
 <p>For instance, provided below is a visual representation of the coordinates obtained from the Overpass API when querying for “南港區” (Nangang District):</p>
+</li>
+</ul>
 <figure class="align-default" id="nangang">
 <a class="reference internal image-reference" href="../../_images/nangang.png"><img alt="../../_images/nangang.png" src="../../_images/nangang.png" style="width: 528.0px; height: 295.8px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">Boundary of Nangang District as provided by the Overpass API</span><a class="headerlink" href="#nangang" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</li>
+<ul class="simple">
 <li><p><strong>Solution:</strong> Move to <a class="reference external" href="https://nominatim.org/release-docs/latest/api/Overview/">Nominatim API</a>.</p></li>
 <li><p><strong>Other Solution:</strong> Request Overpass API a xml file, and use <a class="reference external" href="https://tyrasd.github.io/osmtogeojson/">osmtogeojson</a> to transfer it to geoJSON. No sure why it works.</p></li>
 </ul>
@@ -450,7 +452,7 @@ document.write(`
 </section>
 </section>
 <section id="unsolved-probelms">
-<h2>Unsolved Probelms<a class="headerlink" href="#unsolved-probelms" title="Permalink to this heading">#</a></h2>
+<h2>📌 Unsolved Probelms<a class="headerlink" href="#unsolved-probelms" title="Permalink to this heading">#</a></h2>
 <section id="ipywidget">
 <h3>Ipywidget<a class="headerlink" href="#ipywidget" title="Permalink to this heading">#</a></h3>
 <ul>
@@ -467,7 +469,7 @@ document.write(`
 </section>
 </section>
 <section id="futher-expectation">
-<h2>Futher Expectation<a class="headerlink" href="#futher-expectation" title="Permalink to this heading">#</a></h2>
+<h2>📌 Futher Expectation<a class="headerlink" href="#futher-expectation" title="Permalink to this heading">#</a></h2>
 <section id="support-english-dataset">
 <h3>Support English Dataset<a class="headerlink" href="#support-english-dataset" title="Permalink to this heading">#</a></h3>
 <p>As of now, the NER model we are utilizing exclusively supports traditional Chinese, rendering English and other languages incompatible. However, our aspirations involve broadening our language processing capabilities to encompass a wider array of languages in the future.</p>
@@ -545,7 +547,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solved-probelms">Solved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solved-probelms">📌 Solved Probelms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-file-of-ckiptagger-need-too-much-spaces">Model file of Ckiptagger need too much spaces</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-api-not-returning-coordinates-in-counter-clockwise-order">Overpass API Not Returning Coordinates in Counter Clockwise Order</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cannot-load-data-from-the-current-repository">Cannot Load Data from the Current Repository</a><ul class="nav section-nav flex-column">
@@ -555,12 +557,12 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsolved-probelms">Unsolved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsolved-probelms">📌 Unsolved Probelms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipywidget">Ipywidget</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excessive-book-launching-time">Excessive Book Launching Time</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futher-expectation">Futher Expectation</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futher-expectation">📌 Futher Expectation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-english-dataset">Support English Dataset</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-search-result-by-relevance">Sort Search Result by Relevance</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-search-result-from-apis-is-irrelevant-to-our-dataset">Check if Search Result from APIs is Irrelevant to our Dataset</a></li>
