@@ -366,11 +366,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-and-solution-during-project">Problems and Solution During Project</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nlp-models-ckiptagger">NLP models: Ckiptagger</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apis-response-spatial-information">APIs Response Spatial Information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mybinder-launching">myBinder Launching</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-a-list-of-assets-that-should-be-copied">specify a list of assets that should be copied</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solved-probelms">Solved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-file-of-ckiptagger-need-too-much-spaces">Model file of Ckiptagger need too much spaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-api-not-returning-coordinates-in-counter-clockwise-order">Overpass API Not Returning Coordinates in Counter Clockwise Order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cannot-load-data-from-the-current-repository">Cannot Load Data from the Current Repository</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-image-data-uploaded-does-not-appear-on-the-site">1. Non-image data uploaded does not appear on the site</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-path-may-not-work">2. Relative path may not work</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsolved-probelms">Unsolved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipywidget">Ipywidget</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excessive-book-launching-time">Excessive Book Launching Time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futher-expectation">Futher Expectation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-english-dataset">Support English Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-search-result-by-relevance">Sort Search Result by Relevance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-search-result-from-apis-is-irrelevant-to-our-dataset">Check if Search Result from APIs is Irrelevant to our Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-the-input-pdf-or-text-files-and-output-the-dataset-description">Read the Input .pdf or Text Files and Output the Dataset Description</a></li>
 </ul>
 </li>
 </ul>
@@ -386,20 +401,88 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exploration-and-failed-trials">
 <h1>Exploration and Failed Trials<a class="headerlink" href="#exploration-and-failed-trials" title="Permalink to this heading">#</a></h1>
-<section id="problems-and-solution-during-project">
-<h2>Problems and Solution During Project<a class="headerlink" href="#problems-and-solution-during-project" title="Permalink to this heading">#</a></h2>
-<section id="nlp-models-ckiptagger">
-<h3>NLP models: Ckiptagger<a class="headerlink" href="#nlp-models-ckiptagger" title="Permalink to this heading">#</a></h3>
+<p>During the evolution of this project, we encountered various challenges and sought to implement our project vision in a strategic manner. Here, we outline the issues we encountered, along with the solutions we devised. While certain problems persist without resolution, it’s important to acknowledge our progress thus far.</p>
+<p>Furthermore, in the concluding segment, we will delve into our future plans and avenues for enhancing our existing work.</p>
+<section id="solved-probelms">
+<h2>Solved Probelms<a class="headerlink" href="#solved-probelms" title="Permalink to this heading">#</a></h2>
+<section id="model-file-of-ckiptagger-need-too-much-spaces">
+<h3>Model file of Ckiptagger need too much spaces<a class="headerlink" href="#model-file-of-ckiptagger-need-too-much-spaces" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Problem description:</strong> Initially, we opted for the <a class="reference external" href="https://github.com/ckiplab/ckiptagger">ckiptagger</a> to execute the NLP task. However, this choice necessitated downloading the model files to our local environment prior to usage. Regrettably, the file size is too large to push to GitHub.</p></li>
+<li><p><strong>Solution:</strong> Use <a class="reference external" href="https://github.com/ckiplab/ckip-transformers">ckip-transformers</a> instead. Unlike our previous approach, ckip-transformers doesn’t mandate downloading the model to our local environment; we are able to directly access the model from HuggingFace’s transformers library.</p></li>
+</ul>
 </section>
-<section id="apis-response-spatial-information">
-<h3>APIs Response Spatial Information<a class="headerlink" href="#apis-response-spatial-information" title="Permalink to this heading">#</a></h3>
+<section id="overpass-api-not-returning-coordinates-in-counter-clockwise-order">
+<h3>Overpass API Not Returning Coordinates in Counter Clockwise Order<a class="headerlink" href="#overpass-api-not-returning-coordinates-in-counter-clockwise-order" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Problem description:</strong> Initially, our intention was to retrieve geographical data using the  <a class="reference external" href="http://overpass-api.de/">Overpass API</a>. However, the coordinates returned from this source did not conform to the counter clockwise order.</p>
+<p>For instance, provided below is a visual representation of the coordinates obtained from the Overpass API when querying for “南港區” (Nangang District):</p>
+<figure class="align-default" id="nangang">
+<a class="reference internal image-reference" href="images/nangang.png"><img alt="images/nangang.png" src="images/nangang.png" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Boundary of Nangang District as provided by the Overpass API</span><a class="headerlink" href="#nangang" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Solution:</strong> Move to <a class="reference external" href="https://nominatim.org/release-docs/latest/api/Overview/">Nominatim API</a>.</p></li>
+<li><p><strong>Other Solution:</strong> Request Overpass API a xml file, and use <a class="reference external" href="https://tyrasd.github.io/osmtogeojson/">osmtogeojson</a> to transfer it to geoJSON. No sure why it works.</p></li>
+</ul>
 </section>
-<section id="mybinder-launching">
-<h3>myBinder Launching<a class="headerlink" href="#mybinder-launching" title="Permalink to this heading">#</a></h3>
+<section id="cannot-load-data-from-the-current-repository">
+<h3>Cannot Load Data from the Current Repository<a class="headerlink" href="#cannot-load-data-from-the-current-repository" title="Permalink to this heading">#</a></h3>
+<section id="non-image-data-uploaded-does-not-appear-on-the-site">
+<h4>1. Non-image data uploaded does not appear on the site<a class="headerlink" href="#non-image-data-uploaded-does-not-appear-on-the-site" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p><strong>Problem description:</strong> We have a data file that will be used in our <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>, everything work smoothly in the loacl, but it turns out that the file doesn’t seem to exist when executed remotely.</p>
+<p>We gueseed this issue arose due to the fact that when we utilized the <code class="docutils literal notranslate"><span class="pre">jupyterbook</span> <span class="pre">--build</span> <span class="pre">book_name/</span></code> command, the script did not transfer additional files or directories to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch, which functions as the host for our book’s site. Consequently, the data file remained in our original <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and became inaccessible via its file path, as it was absent in the site branch.</p>
+</li>
+<li><p><strong>Solution:</strong> Move copy the file under <code class="docutils literal notranslate"><span class="pre">_build/html</span></code>, and doing this by putting it under the <code class="docutils literal notranslate"><span class="pre">jupyterbook</span> <span class="pre">--build</span> <span class="pre">book_name/</span></code> command in makefile. <em>(Notice: in the _deploy.yml, the command we build the whole site is <code class="docutils literal notranslate"><span class="pre">make</span></code>, instead of the default, <code class="docutils literal notranslate"><span class="pre">jupyterbook</span> <span class="pre">--build</span> <span class="pre">book_name/</span></code>)</em></p></li>
+<li><p><strong>Other Solutions</strong>: <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/790"> An easy way to specify a list of assets that should be copied over. #790</a></p></li>
+</ul>
 </section>
-<section id="specify-a-list-of-assets-that-should-be-copied">
-<h3>specify a list of assets that should be copied<a class="headerlink" href="#specify-a-list-of-assets-that-should-be-copied" title="Permalink to this heading">#</a></h3>
-<p><a class="github reference external" href="https://github.com/executablebooks/jupyter-book/issues/790">executablebooks/jupyter-book#790</a></p>
+<section id="relative-path-may-not-work">
+<h4>2. Relative path may not work<a class="headerlink" href="#relative-path-may-not-work" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Problem description:</strong> Even after including the data file in our site branch, we encountered a situation where accessing the file remained problematic. This issue arose from the realization that the file path on the remote server might not align with our initial expectations. Consequently, attempts to use a relative path for loading the file proved to be unsuccessful.</p></li>
+<li><p><strong>Solution:</strong> Use absolute path(url). However, we’ve not found a solution that allows a relative file path.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="unsolved-probelms">
+<h2>Unsolved Probelms<a class="headerlink" href="#unsolved-probelms" title="Permalink to this heading">#</a></h2>
+<section id="ipywidget">
+<h3>Ipywidget<a class="headerlink" href="#ipywidget" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Problem description:</strong> We found that the <a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/user_install.html">Ipywidget</a> widget did not respond as expected to our actions. Despite our attempt to implement the <a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Events.html">button example</a> provided in the documentation, no visible outcome ensued upon clicking the button. In theory, it should display “Button clicked.” on the screen.</p>
+<p>The related topic remains open: <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/1991"> widgets not rendering on jupyter-book website (seemingly broken) #1991</a></p>
+</li>
+</ul>
+</section>
+<section id="excessive-book-launching-time">
+<h3>Excessive Book Launching Time<a class="headerlink" href="#excessive-book-launching-time" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Problem description:</strong> Using the <code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">Code</span></code> feature to run the book within myBinder might result in a prolonged execution time.</p></li>
+</ul>
+</section>
+</section>
+<section id="futher-expectation">
+<h2>Futher Expectation<a class="headerlink" href="#futher-expectation" title="Permalink to this heading">#</a></h2>
+<section id="support-english-dataset">
+<h3>Support English Dataset<a class="headerlink" href="#support-english-dataset" title="Permalink to this heading">#</a></h3>
+<p>As of now, the NER model we are utilizing exclusively supports traditional Chinese, rendering English and other languages incompatible. However, our aspirations involve broadening our language processing capabilities to encompass a wider array of languages in the future.</p>
+</section>
+<section id="sort-search-result-by-relevance">
+<h3>Sort Search Result by Relevance<a class="headerlink" href="#sort-search-result-by-relevance" title="Permalink to this heading">#</a></h3>
+<p>The outcomes from both the Wikidata and OSM API requests adhere to the sequence provided by the respective API responses. Nonetheless, it would greatly enhance user experience if we could arrange these outcomes based on their relevance. This refinement would contribute to a smoother and more user-friendly interface.</p>
+</section>
+<section id="check-if-search-result-from-apis-is-irrelevant-to-our-dataset">
+<h3>Check if Search Result from APIs is Irrelevant to our Dataset<a class="headerlink" href="#check-if-search-result-from-apis-is-irrelevant-to-our-dataset" title="Permalink to this heading">#</a></h3>
+<p>Occasionally, the search results from Wikidata or OpenStreetMap (OSM) may evidently diverge from our input, and rectifying these inconsistencies remains beyond our control. In such instances, our primary recourse is to devise methods for filtering out undesired outcomes.</p>
+</section>
+<section id="read-the-input-pdf-or-text-files-and-output-the-dataset-description">
+<h3>Read the Input .pdf or Text Files and Output the Dataset Description<a class="headerlink" href="#read-the-input-pdf-or-text-files-and-output-the-dataset-description" title="Permalink to this heading">#</a></h3>
+<p>Our concept revolves around minimizing the metadata input required from users while simultaneously assisting them in augmenting their dataset’s metadata. Moving forward, our next stride could entail extracting textual data from a dataset and autonomously generating a description for it.</p>
 </section>
 </section>
 </section>
@@ -462,11 +545,26 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-and-solution-during-project">Problems and Solution During Project</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nlp-models-ckiptagger">NLP models: Ckiptagger</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apis-response-spatial-information">APIs Response Spatial Information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mybinder-launching">myBinder Launching</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-a-list-of-assets-that-should-be-copied">specify a list of assets that should be copied</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solved-probelms">Solved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-file-of-ckiptagger-need-too-much-spaces">Model file of Ckiptagger need too much spaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-api-not-returning-coordinates-in-counter-clockwise-order">Overpass API Not Returning Coordinates in Counter Clockwise Order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cannot-load-data-from-the-current-repository">Cannot Load Data from the Current Repository</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-image-data-uploaded-does-not-appear-on-the-site">1. Non-image data uploaded does not appear on the site</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-path-may-not-work">2. Relative path may not work</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsolved-probelms">Unsolved Probelms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipywidget">Ipywidget</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excessive-book-launching-time">Excessive Book Launching Time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futher-expectation">Futher Expectation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-english-dataset">Support English Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-search-result-by-relevance">Sort Search Result by Relevance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-search-result-from-apis-is-irrelevant-to-our-dataset">Check if Search Result from APIs is Irrelevant to our Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-the-input-pdf-or-text-files-and-output-the-dataset-description">Read the Input .pdf or Text Files and Output the Dataset Description</a></li>
 </ul>
 </li>
 </ul>
