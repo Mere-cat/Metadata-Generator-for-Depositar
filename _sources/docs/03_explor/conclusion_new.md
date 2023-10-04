@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.1
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: 2023-sinica-intern
   language: python
@@ -138,7 +138,7 @@ def geoInfo_output(result):
 ✨ You can type information of your own dataset here:
 
 ```{code-cell} ipython3
-title = ''
+title = '中研院'
 description = ''
 resource_names = []
 resource_descriptions = []

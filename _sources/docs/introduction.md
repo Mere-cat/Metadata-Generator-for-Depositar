@@ -1,6 +1,8 @@
 # Introduction
 ## About Auto-Metadata Generator
-Depositar is an online repository dedicated to housing research data curated by Academia Sinica, Taiwan. As is the case with any data repository, the role of metadata cannot be understated—it serves as the cornerstone when users embark on the quest to discover datasets that align with their specific requirements.
+*This is an intern project for the 2023 SINICA internship.*
+
+[Depositar](https://data.depositar.io/about) is an online repository dedicated to housing research data curated by Academia Sinica, Taiwan. As is the case with any data repository, the role of metadata cannot be understated—it serves as the cornerstone when users embark on the quest to discover datasets that align with their specific requirements.
 
 Nonetheless, the task of accurately and comprehensively filling in metadata remains a formidable challenge for dataset providers. When users upload their datasets, they often find themselves uncertain about which Wikidata keywords would best suit their content. Moreover, grappling with the intricacies of spatial coverage can be a considerably intricate endeavor.
 

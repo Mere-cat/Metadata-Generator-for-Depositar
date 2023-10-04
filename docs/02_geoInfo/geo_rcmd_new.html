@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -62,7 +63,6 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/02_geoInfo/geo_rcmd_new';</script>
-    <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Live Demo" href="geo_demo_new.html" />
@@ -77,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -413,10 +422,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -424,7 +433,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -720,30 +729,28 @@ Organization Description :
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OSM result for 林邊 is:
+📍 林邊, 仁愛路, 光林村, 林邊鄉, 屏東縣, 927, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.5149753, 22.4314199]}
 📍 林边, 礼县, 陇南市, 甘肃省, 中国
 {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [105.247, 34.1612]}
 📍 林邊, 黃埔村, 烈嶼鄉, 金門縣, 894, 臺灣
 {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [118.2514395, 24.4465422]}
 📍 林边, 华坪县, 丽江市, 云南省, 中国
 {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [101.2901069, 26.7634965]}
+📍 林邊, 仁和路, 仁和村, 林邊鄉, 屏東縣, 927, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.515038, 22.4315225]}
+📍 林邊, 仁愛路, 光林村, 林邊鄉, 屏東縣, 927, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.514982, 22.4314002]}
+📍 林邊, 成功路, 中莊, 崎峯村, 林邊鄉, 屏東縣, 927, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.4901309, 22.4302016]}
 -------------------------------------------
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OSM result for 屏東縣政府 is:
-📍 屏東縣政府消防局 第一大隊長治分隊, 572, 中興路, 德成村, 長治鄉, 屏東縣, 908, 臺灣
-{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[120.5424344, 22.6931001], [120.5425768, 22.6926576], [120.5427666, 22.6927096], [120.5426244, 22.6931521], [120.5424344, 22.6931001]]]}
-📍 三地門分駐所, 101, 中正路二段, 三地門 Timur, 三地村, 三地門鄉, 屏東縣, 901, 臺灣
-{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.653923, 22.7164095]}
-📍 龍泉派出所, 76, 原勝路, 龍泉村, 內埔鄉, 屏東縣, 91244, 臺灣
-{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.600196, 22.669117]}
-📍 屏東縣政府文化處, 瑞華街, 瑞光里, 屏東市, 屏東縣, 900, 臺灣
-{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.5060132, 22.6638532]}
-📍 屏東縣政府消防局特種災害防救訓練基地, 中興路, 德成村, 長治鄉, 屏東縣, 908, 臺灣
-{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[120.541641, 22.6923903], [120.5418882, 22.6915993], [120.5421169, 22.6916561], [120.5423067, 22.6910067], [120.5441017, 22.6903721], [120.5445221, 22.6904809], [120.5444873, 22.6905955], [120.5448628, 22.6906878], [120.5446494, 22.6914052], [120.5442977, 22.6913161], [120.5440393, 22.6921128], [120.5436181, 22.6919996], [120.5433739, 22.6927832], [120.5430217, 22.6926809], [120.5428424, 22.6932162], [120.5426747, 22.693169], [120.5428287, 22.692714], [120.541641, 22.6923903]]]}
-📍 泰武派出所, 佳平巷, 佳平村, 泰武鄉, 屏東縣, 923, 臺灣
-{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.628896, 22.5916784]}
-📍 三地門消防分隊, 中正路二段, 三地門 Timur, 三地村, 三地門鄉, 屏東縣, 901, 臺灣
-{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[120.6536094, 22.7168276], [120.6537405, 22.7167141], [120.6536988, 22.7166731], [120.6537876, 22.7165963], [120.6539313, 22.7167376], [120.6537114, 22.7169279], [120.6536094, 22.7168276]]]}
+📍 屏東縣政府, 527, 自由路, 勝利里, 屏東市, 屏東縣, 90001, 臺灣
+{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[120.4874268, 22.6826975], [120.4874494, 22.6822285], [120.4877855, 22.6822422], [120.4877771, 22.6824174], [120.4878862, 22.6824219], [120.4878886, 22.6823723], [120.4881782, 22.6823842], [120.4881759, 22.6824321], [120.4883277, 22.6824383], [120.4883346, 22.6822964], [120.4886458, 22.6823091], [120.4886243, 22.6827568], [120.4884804, 22.682751], [120.4884744, 22.6828768], [120.4885186, 22.6828786], [120.4885102, 22.6830528], [120.487475, 22.6830104], [120.4874842, 22.6828181], [120.487576, 22.6828219], [120.4875816, 22.6827038], [120.4874268, 22.6826975]], [[120.487765, 22.6827672], [120.4882821, 22.682786], [120.4882933, 22.6825238], [120.4877762, 22.682505], [120.487765, 22.6827672]]]}
+📍 屏東縣政府, 527, 自由路, 勝利里, 屏東市, 屏東縣, 90001, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [120.4879096, 22.6829927]}
 -------------------------------------------
 </pre></div>
 </div>
@@ -822,11 +829,10 @@ Organization Description :
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="geo_rcmd_intro.html"
@@ -846,10 +852,7 @@ Organization Description :
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -929,8 +932,8 @@ By dQuQb
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

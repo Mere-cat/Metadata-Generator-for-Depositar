@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -62,7 +63,6 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/03_explor/conclusion';</script>
-    <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -75,6 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -394,10 +403,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -405,7 +414,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -591,7 +600,7 @@ At least one of the fields should be completed. Leaving all of them empty is not
 <p>✨ You can type information of your own dataset here:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;中研院&#39;</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="n">resource_names</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">resource_descriptions</span> <span class="o">=</span> <span class="p">[]</span>
@@ -599,6 +608,29 @@ At least one of the fields should be completed. Leaving all of them empty is not
 <span class="n">organization_description</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">gen_keyword</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">resource_names</span><span class="p">,</span> <span class="n">resource_descriptions</span><span class="p">,</span> <span class="n">organization_title</span><span class="p">,</span> <span class="n">organization_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tokenization:   0%|          | 0/6 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tokenization: 100%|██████████| 6/6 [00:00&lt;00:00, 47038.92it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inference:   0%|          | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inference: 100%|██████████| 1/1 [00:00&lt;00:00,  4.36it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inference: 100%|██████████| 1/1 [00:00&lt;00:00,  4.33it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -616,7 +648,17 @@ At least one of the fields should be completed. Leaving all of them empty is not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At least one of the fields should be completed. Leaving all of them empty is not permissible.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>中研院
+QID: Q337266, Label: Academia Sinica, Description: national academy of Taiwan
+QID: Q20872478, Label: Biodiversity Research Center, Academia Sinica, Description: organization
+QID: Q20872470, Label: Institute of Information Science, Academia Sinica, Description: organization
+QID: Q10875102, Label: Member of Academia Sinica, Description: academic award in Taiwan
+QID: Q10899637, Label: Hung En Liu, Description: No description available
+QID: Q93696545, Label: Institute of Astronomy &amp; Astrophysics Llbrary, Academic Sinica, Description: No description available
+QID: Q120579929, Label: Reasons for the Failure of the Program for the Foundation of a National Metrology System of Time in the Academia Sinica in 1930s, Description: No description available
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-------------------------------------------
 </pre></div>
 </div>
 </div>
@@ -631,7 +673,16 @@ At least one of the fields should be completed. Leaving all of them empty is not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At least one of the fields should be completed. Leaving all of them empty is not permissible.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OSM result for 中研院 is:
+📍 中央研究院, 128, 研究院路二段, 中研里, 南港區, 舊莊, 臺北市, 11529, 臺灣
+{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[121.6098139, 25.0423357], [121.6099928, 25.0422723], [121.6101471, 25.0424388], [121.6102986, 25.0423416], [121.6114298, 25.042353], [121.611598, 25.0422362], [121.6111609, 25.0417884], [121.6110376, 25.0415609], [121.6108531, 25.0413988], [121.6108391, 25.0412591], [121.6108483, 25.0411745], [121.6108213, 25.0409236], [121.6109215, 25.0406827], [121.6109234, 25.0405608], [121.6111356, 25.0395975], [121.6112723, 25.0394586], [121.6119245, 25.0387853], [121.612849, 25.0395204], [121.6132347, 25.0391222], [121.6145719, 25.0394481], [121.6153276, 25.0386336], [121.6154951, 25.0386861], [121.6153522, 25.0390601], [121.6172567, 25.0388414], [121.6174233, 25.0400362], [121.6174569, 25.0403346], [121.6174815, 25.0406155], [121.6174912, 25.0407662], [121.6167943, 25.0416525], [121.6166898, 25.0419514], [121.6166698, 25.0420211], [121.6166611, 25.0420439], [121.616643, 25.0421047], [121.6166444, 25.0421754], [121.6167759, 25.0423978], [121.6167836, 25.042444], [121.6160597, 25.0438771], [121.6159596, 25.0440789], [121.6153441, 25.043857], [121.6149866, 25.0437405], [121.6146199, 25.0446663], [121.6145301, 25.0446373], [121.6141955, 25.0454896], [121.6137999, 25.0453621], [121.6124401, 25.0453351], [121.6124939, 25.0430158], [121.6123115, 25.0430126], [121.6122654, 25.043012], [121.6122424, 25.0429623], [121.6116596, 25.0429193], [121.6114791, 25.0429102], [121.6100696, 25.0428747], [121.6100116, 25.0425081], [121.6098547, 25.0424023], [121.6098139, 25.0423357]]]}
+📍 中研院, 128, 研究院路二段, 中研里, 南港區, 舊莊, 臺北市, 11529, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [121.6165385, 25.0428838]}
+📍 中研院, 研究院路二段, 中研里, 南港區, 三重埔, 臺北市, 11564, 臺灣
+{&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [121.6165938, 25.043366]}
+📍 中研院, 工农大路, 红旗街, 红旗街道, 朝阳区, 长春市, 吉林省, 130000, 中国
+{&quot;type&quot;: &quot;Polygon&quot;, &quot;coordinates&quot;: [[[125.2966103, 43.8635572], [125.2975544, 43.8628417], [125.2983966, 43.8634218], [125.297431, 43.8641219], [125.2966103, 43.8635572]]]}
+-------------------------------------------
 </pre></div>
 </div>
 </div>
@@ -705,16 +756,12 @@ At least one of the fields should be completed. Leaving all of them empty is not
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -788,8 +835,8 @@ By dQuQb
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
