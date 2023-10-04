@@ -1,6 +1,6 @@
 # Introduction
 ## About Auto-Metadata Generator
-*This is an intern project for the 2023 SINICA internship.*
+*This is an intern project for the 2023 ACADEMIA SINICA summer internship.*
 
 [Depositar](https://data.depositar.io/about) is an online repository dedicated to housing research data curated by Academia Sinica, Taiwan. As is the case with any data repository, the role of metadata cannot be understated—it serves as the cornerstone when users embark on the quest to discover datasets that align with their specific requirements.
 
