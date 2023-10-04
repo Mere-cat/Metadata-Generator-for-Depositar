@@ -12,7 +12,6 @@ execute:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon                   : images/icons/favicon.png
   use_repository_button     : true
   use_issues_button         : true
 
